@@ -1,0 +1,19 @@
+.socialLinks {
+  grid-area: socialLinks;
+}
+
+.socialLinks li {
+  list-style-type: none;
+}
+
+.socialList {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.socialIcon {
+  font-size: 35px;
+  color: #888787;
+}

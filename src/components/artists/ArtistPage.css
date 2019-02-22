@@ -1,0 +1,44 @@
+.artistTitle {
+  grid-area: artistTitle;
+}
+
+.artistImg {
+  margin-top: 30px;
+  grid-area: artistImg;
+}
+
+.artistImg > img {
+  max-width: 90%;
+}
+
+.artistInfo {
+  margin-top: 30px;
+  grid-area: artistInfo;
+}
+
+.artistGrid {
+  width: 80vw;
+  margin: 10px auto 0px auto;
+  font-size: 20px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 60px;
+  grid-template-areas:
+    "artistTitle artistTitle"
+    "artistImg artistInfo"
+    "artistSocial artistSocial";
+}
+
+@media screen and (max-width: 992px) {
+  .artistGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "artistTitle"
+      "artistImg"
+      "artistInfo"
+      "artistSocial";
+  }
+}

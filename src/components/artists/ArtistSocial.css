@@ -1,0 +1,13 @@
+.artistSocialIcon {
+  color: white;
+  font-size: 40px;
+}
+
+.artistSocial {
+  grid-area: artistSocial;
+  margin-top: 20px;
+  display: grid;
+  grid-column-gap: 30px;
+  justify-items: center;
+  align-items: center;
+}

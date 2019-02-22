@@ -1,21 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from 'styled-components';
+import Layout from "../components/shared/Layout";
+import homepageImg from '../images/home/homepage.png';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const HomeDiv = styled.div`
+  font-size: 20px;
+  width: 80vw;
+  margin: auto;
+  margin-top: 80px;
+`;
+
+const HomeImg = styled.img`
+  max-width: 100%;
+`;
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <HomeDiv>
+      <HomeImg src={homepageImg} alt='Mr Riddim'/>
+    </HomeDiv>
   </Layout>
 )
 
-export default IndexPage
+export default IndexPage;

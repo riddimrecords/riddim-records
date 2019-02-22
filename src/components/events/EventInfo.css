@@ -1,0 +1,86 @@
+.eventDesc {
+  grid-area: eventDesc;
+}
+
+/* .eventInfoGrid {
+  grid-area: eventInfoGrid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+} */
+
+.eventArtists {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin-top: 0;
+}
+
+.eventInfo {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "eventPoster eventDate"
+    "eventPoster eventDesc"
+    "eventPoster eventArtists"
+    "eventLocation eventLocation";
+}
+
+.eventDateContainer {
+  grid-area: eventDate;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileButtonPrev,
+.mobileButtonNext {
+  display: none;
+  font-size: 30px;
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .eventInfo {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "eventDate"
+      "eventPoster"
+      "eventDesc"
+      "eventArtists"
+      "eventLocation";
+  }
+  .eventInfoGrid {
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+  }
+  .mobileButtonPrev,
+  .mobileButtonNext {
+    display: block;
+  }
+  .mobileButtonPrev {
+    margin-right: 40px;
+  }
+  .mobileButtonNext {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .eventDate {
+    font-size: 20px;
+  }
+  .mobileButtonPrev,
+  .mobileButtonNext {
+    font-size: 20px;
+  }
+  .mobileButtonPrev {
+    margin-right: 20px;
+  }
+  .mobileButtonNext {
+    margin-left: 20px;
+  }
+}
