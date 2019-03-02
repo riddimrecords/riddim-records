@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -26,5 +27,12 @@ const EventDate = (props) => (
     </Link>
   </div>
 );
+
+EventDate.propTypes = {
+  events: PropTypes.shape({
+    key: PropTypes.string,
+    date: PropTypes.string,
+  })
+};
 
 export default EventDate;

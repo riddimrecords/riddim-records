@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import EventPoster from "./EventPoster";
 import EventDate from "./EventDate";
 import EventLocation from './EventLocation';
@@ -19,5 +20,13 @@ const EventInfo = props => (
     <EventLocation event={props.event}/>
   </div>
 );
+
+EventDate.propTypes = {
+  event: PropTypes.shape({
+    info: PropTypes.string,
+    artists: PropTypes.array,
+  }),
+  events: PropTypes.array,
+};
 
 export default EventInfo;

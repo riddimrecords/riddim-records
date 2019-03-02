@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSoundcloud, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./ArtistSocial.css";
@@ -6,14 +7,11 @@ import aor from "../../images/shared/aor.png";
 
 const ArtistSocial = props => {
   const artistSocialCols = `repeat(${Object.keys(props.artist.social).length}, 1fr)`;
-  // const artistGap = (props.artist.name === "Hannah Lux") || (props.artist.name === "Skinny") === "Hannah Lux" 
-    // ? "40px" : "auto";
   return (
     <div
       className="artistSocial"
       style={{
         gridTemplateColumns: artistSocialCols,
-        // gridColumnGap: artistGap
       }}
     >
       {props.artist.social.soundcloud ? (
@@ -36,5 +34,16 @@ const ArtistSocial = props => {
     </div>
   );
 };
+
+ArtistSocial.propTypes = {
+  artist: PropTypes.shape({
+    social: PropTypes.shape({
+      soundcloud: PropTypes.string,
+      facebook: PropTypes.string,
+      instagram: PropTypes.string,
+      aor: PropTypes.string
+    })
+  })
+}
 
 export default ArtistSocial;
