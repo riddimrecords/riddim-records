@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import styled from 'styled-components';
 import Layout from "../components/shared/Layout";
 import './Lookbook.css';
@@ -43,26 +41,12 @@ const Lookbook = ({ data }) => (
       {lookbookImages.map((image, index) => {
         return (
           <div key={index} className='lookbookImg'>
-            <Img fixed={image} alt={`Lookbook ${lookbookImages.indexOf(image) + 1}`}/>
+            <img fixed={image} alt={`Lookbook ${lookbookImages.indexOf(image) + 1}`}/>
           </div>
         );
       })}
     </LookbookGrid>
   </Layout>
 );
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "blog/avatars/kyle-mathews.jpeg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 125, height: 125) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
 
 export default Lookbook;
