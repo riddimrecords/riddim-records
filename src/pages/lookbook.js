@@ -32,7 +32,7 @@ const LookbookGrid = styled.div`
   }
 `;
 
-const Lookbook = ({ data }) => (
+const Lookbook = () => (
   <Layout>
     <Helmet>
       <title>Riddim Records | Lookbook</title>
@@ -41,7 +41,7 @@ const Lookbook = ({ data }) => (
       {lookbookImages.map((image, index) => {
         return (
           <div key={index} className='lookbookImg'>
-            <img fixed={image} alt={`Lookbook ${lookbookImages.indexOf(image) + 1}`}/>
+            <img src={image} alt={`Lookbook ${lookbookImages.indexOf(image) + 1}`}/>
           </div>
         );
       })}
