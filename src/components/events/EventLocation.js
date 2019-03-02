@@ -11,7 +11,7 @@ const EventLocationDiv = styled.div`
 
 const EventLocation = (props) => (
   <EventLocationDiv>
-    {props.event.location}
+    <div dangerouslySetInnerHTML={{ __html: props.event.location}}></div>
   </EventLocationDiv>
 );
 

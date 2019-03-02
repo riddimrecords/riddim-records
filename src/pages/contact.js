@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import Layout from '../components/shared/Layout';
 import Panel from '../components/contact/Panel';
@@ -30,6 +31,9 @@ const Logo = styled.img`
 
 const Contact = (props) => (
   <Layout>
+    <Helmet>
+      <title>Riddim Records | Contact</title>
+    </Helmet>
     <ContactDiv>
       <h1>Contact</h1>
       <Logo src={riddim} alt="Riddim Logo"/>

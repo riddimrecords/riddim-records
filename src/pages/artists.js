@@ -1,8 +1,9 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 import styled from "styled-components";
 import Layout from "../components/shared/Layout";
 import ArtistContainer from "../components/artists/ArtistContainer";
-import artists from "../data/artists";
+const { artists } = require('../data/artists');
 
 const ArtistsDiv = styled.div`
   width: 80vw;
@@ -21,6 +22,9 @@ const ArtistsDiv = styled.div`
 
 const Artists = () => (
   <Layout>
+    <Helmet>
+      <title>Riddim Records | Artists</title>
+    </Helmet>
     <ArtistsDiv className="artists">
       {artists.map(artist => {
         return <ArtistContainer key={artist.key} artist={artist} />;

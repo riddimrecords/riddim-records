@@ -1,13 +1,13 @@
-import low from './low';
-import mascot from './mascot';
-import mowgli from './mowgli';
-import rous from './rous';
-import hannahLux from './hannahlux';
-import reload from './reload';
-import ebbens from './ebbens';
-import skinny from './skinny';
-import mcxl from './mcxl';
+const { low } = require('./low');
+const { mascot } = require('./mascot');
+const { mowgli } = require('./mowgli');
+const { rous } = require('./rous');
+const { hannahLux } = require('./hannahlux');
+const { reload } = require('./reload');
+const { ebbens } = require('./ebbens');
+const { skinny } = require('./skinny');
+const { mcxl } = require('./mcxl');
 
-const artistInfo = [low, mascot, mowgli, rous, hannahLux, reload, ebbens, skinny, mcxl];
+const artists = [low, mascot, mowgli, rous, hannahLux, reload, ebbens, skinny, mcxl];
 
-export default artistInfo;
+module.exports = { artists };

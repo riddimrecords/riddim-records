@@ -13,7 +13,7 @@ const EventImg = styled.img`
 `;
 
 const EventPoster = props => (
-  <EventImg src={props.event.poster} alt="Riddim Poster" />
+  <EventImg src={require(`../../images/events/${props.event.poster}`)} alt="Riddim Poster" />
 );
 
 export default EventPoster;

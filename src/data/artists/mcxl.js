@@ -1,9 +1,5 @@
-import React from 'react';
-import mcxlPic from '../../images/artists/McXLSquare.jpg';
-
-const info = (<div>
-  <p>Resident Host @ Aperture / Bedlam / Bullion / Diffrent / Submerge / Skankandbass / Shelter / Spindoctors / Riddim Records / Temple</p>
-</div>);
+const info = `Resident Host @ Aperture / Bedlam / Bullion / Diffrent / 
+Submerge / Skankandbass / Shelter / Spindoctors / Riddim Records / Temple`;
 
 const mcxl = {
   key: 'mcxl',
@@ -13,8 +9,8 @@ const mcxl = {
     facebook: 'https://www.facebook.com/mcxldnb/',
     instagram: 'https://www.instagram.com/xl_mc/',
   },
-  info: info,
-  pic: mcxlPic,
+  info: [info],
+  pic: 'McXLSquare.jpg'
 };
 
-export default mcxl;
+module.exports = { mcxl };

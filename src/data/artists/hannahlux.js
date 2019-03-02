@@ -1,12 +1,9 @@
-import React from 'react';
-import hannahPic from '../../images/artists/HannahSquare.jpg';
-
-const info = (<div>
-  <p>Self-taught singer, songwriter and musician,
+const info1 = `Self-taught singer, songwriter and musician,
   Hannah Lux, has been mesmerised by music her entire life and began writing
   her own at the age of 12; inspired by her colourful upbringing in Cardiff,
-  the creative heart of Wales.</p>
-  <p>Lux continued to write and perform throughout her teenage years and her
+  the creative heart of Wales.`;
+  
+const info2 = `Lux continued to write and perform throughout her teenage years and her
   style continuously evolved until she was introduced to electronic music.
   Her first track was an ambient garage collaboration, 'Dangerous', under
   her previous pseudonym, Solis, which attracted attention to her unique
@@ -17,8 +14,7 @@ const info = (<div>
   June Miller on RAM Records under her new pseudonym, Hannah Lux. 'We are not
   Human' is featured on UKF's Youtube platform and quickly became a liquid
   favourite leading to its nomination for the Best Music Video Award at the
-  Bass Awards 2015 and its Top-5 spot in the Beatport chart.</p>
-</div>);
+  Bass Awards 2015 and its Top-5 spot in the Beatport chart.`;
 
 const hannahLux = {
   key: 'hannahlux',
@@ -26,8 +22,8 @@ const hannahLux = {
   social: {
     soundcloud: 'https://soundcloud.com/hannah-lux',
   },
-  info: info,
-  pic: hannahPic,
+  info: [info1, info2],
+  pic: 'HannahSquare.jpg',
 };
 
-export default hannahLux;
+module.exports = { hannahLux };

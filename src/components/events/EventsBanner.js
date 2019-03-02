@@ -25,7 +25,7 @@ const EventsBanner = (props) => {
         return (
           <Link key={`${event.key}`} to={`/events/${event.name}`}>
             <div className='eventBannerImg'>
-              <img src={event.poster} alt={`${event.name} link`} style={{maxWidth: '100%'}}/>
+              <img src={require(`../../images/events/${event.poster}`)} alt={`${event.name} link`} style={{maxWidth: '100%'}}/>
             </div>
           </Link>
         );

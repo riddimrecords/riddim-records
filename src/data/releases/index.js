@@ -1,4 +1,6 @@
-import rr001 from './rr001';
-import rr002 from './rr002';
+const { rr001 } = require('./rr001');
+const { rr002 } = require('./rr002');
 
-export default [rr001, rr002];
+const releases = [rr002, rr001];
+
+module.exports = { releases };

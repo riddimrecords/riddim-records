@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Riddim Records`,
-    description: `Riddim Records`,
+    description: `Riddim Records - A UK-based record label founded on all things drum and bass.`,
     author: `@mm13ah`,
   },
   plugins: [
@@ -28,8 +28,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }
