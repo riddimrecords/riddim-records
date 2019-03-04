@@ -3,7 +3,7 @@ const info1 = `DJ Low, a prominent figure in the upcoming drum and bass artist c
   an incredible ear for the fast-paced genre, Low has made an appearance at nearly 
   every drum and bass night in Cardiff and has recently gained a place with the Major 
   Bass team as a regular DJ.`;
-  
+
 const info2 = `Joining the ranks of the Riddim Records artist collective in 2017, DJ Low 
   has represented the brand up and down the UK and will continue to tear up dance-floors 
   for the foreseeable future.`;

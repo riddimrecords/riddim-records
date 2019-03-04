@@ -9,7 +9,7 @@ const info2 = `The E.P. begins with the sounds of Leeds-based artist Dbrief, who
   with his track "All The 9's". The track infuses a clear Jungle influence, 
   coupled with a classic Hip-Hop groove. A fresh and recognizable track from the 
   liquid specialist himself.`;
-  
+
 const info3 = `The second track, created by artist Thread, reflects his unique and 
     forward-thinking approach to drum and bass. 'Mindless' offers its listeners 
     a dark and experimental journey that so perfectly describes its creators taste 
@@ -27,7 +27,7 @@ const rr001 = {
   info: [info1, info2, info3, info4],
   pic: 'rr001Cover.jpg',
   soundcloud: '<iframe title="RR02" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/500034594&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',
-  fanlink: 'https://fanlink.to/RR001'
+  fanlink: 'https://fanlink.to/RR001',
 };
 
 module.exports = { rr001 };

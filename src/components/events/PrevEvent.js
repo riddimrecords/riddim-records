@@ -1,15 +1,20 @@
 import React from 'react';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import eventProps from './eventProps';
 
-const PrevEvent = (props) => (
-  <div>
-    <Link to={`/events/riddim${props.event.key === props.events[0].key ? props.events[props.events.length-1].key : props.event.key-1}`}>
-      <FontAwesomeIcon icon={faArrowLeft} style={{fontSize: '30px', color: 'white'}}/>
-    </Link>
-  </div>
-);
+const PrevEvent = (props) => {
+  const { event, events } = props;
+  return (
+    <div>
+      <Link to={`/events/riddim${event.key === events[0].key ? events[events.length - 1].key : event.key - 1}`}>
+        <FontAwesomeIcon icon={faArrowLeft} style={{ fontSize: '30px', color: 'white' }} />
+      </Link>
+    </div>
+  );
+};
+
+PrevEvent.propTypes = eventProps;
 
 export default PrevEvent;
-

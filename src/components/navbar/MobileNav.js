@@ -1,20 +1,18 @@
-import React from "react";
-import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import riddimLogo from "../../images/shared/riddimLogo.png";
+import React from 'react';
+import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import riddimLogo from '../../images/shared/riddimLogo.png';
 
-const MobileNav = props => {
+const MobileNav = () => {
   const handleNavButtonClick = () => {
-    let nav = document.querySelector(".mobileNavLinks");
-    nav.style.display === "block"
-      ? (nav.style.display = "none")
-      : (nav.style.display = "block");
+    const nav = document.querySelector('.mobileNavLinks');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
   };
 
   const handleNavLinkClick = () => {
-    let nav = document.querySelector(".mobileNavLinks");
-    nav.style.display = "none";
+    const nav = document.querySelector('.mobileNavLinks');
+    nav.style.display = 'none';
   };
 
   return (
@@ -22,28 +20,29 @@ const MobileNav = props => {
       <div
         className="mobileNavbarTop"
         style={{
-          margin: "20px auto 0px auto",
-          display: "flex",
-          width: "80vw",
-          justifyContent: "space-between",
-          alignItems: "center"
+          margin: '20px auto 0px auto',
+          display: 'flex',
+          width: '80vw',
+          justifyContent: 'space-between',
+          alignItems: 'center',
         }}
       >
         <Link to="/" onClick={handleNavLinkClick}>
-          <img src={riddimLogo} alt="Riddim Logo" style={{ width: "50px" }} />
+          <img src={riddimLogo} alt="Riddim Logo" style={{ width: '50px' }} />
         </Link>
         <button
           onClick={handleNavButtonClick}
-          style={{ color: "white", background: "inherit", border: "none" }}
+          style={{ color: 'white', background: 'inherit', border: 'none' }}
+          type="button"
         >
           <FontAwesomeIcon
             icon={faBars}
             style={{
               marginTop: '1px',
-              fontSize: "25px",
-              border: "solid 1px grey",
-              padding: "10px 15px",
-              borderRadius: "10%"
+              fontSize: '25px',
+              border: 'solid 1px grey',
+              padding: '10px 15px',
+              borderRadius: '10%',
             }}
           />
         </button>
@@ -51,9 +50,9 @@ const MobileNav = props => {
       <ul
         className="mobileNavLinks"
         style={{
-          listStyleType: "none",
-          display: "none",
-          padding: "0",
+          listStyleType: 'none',
+          display: 'none',
+          padding: '0',
         }}
       >
         <li key="about">
@@ -92,7 +91,7 @@ const MobileNav = props => {
           </Link>
         </li>
         <li key="hr">
-          <hr style={{ marginTop: "20px", color: "grey" }} />
+          <hr style={{ marginTop: '20px', color: 'grey' }} />
         </li>
       </ul>
     </div>

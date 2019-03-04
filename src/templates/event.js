@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import Layout from '../components/shared/Layout';
@@ -14,16 +15,25 @@ const EventsMain = styled.div`
   line-height: 1.6em;
 `;
 
-export default ({ pageContext: { event, events } }) => (
+const EventPage = ({ pageContext: { event, events } }) => (
   <Layout>
     <Helmet>
       <title>Riddim Records | Events</title>
     </Helmet>
-    <div style={{marginTop: '80px'}}>
-      {events.length > 1 ? <EventsBanner event={event} events={events}  /> : ''}
+    <div style={{ marginTop: '80px' }}>
+      {events.length > 1 ? <EventsBanner event={event} events={events} /> : ''}
       <EventsMain>
-        <EventInfo event={event} events={events}/>
+        <EventInfo event={event} events={events} />
       </EventsMain>
     </div>
   </Layout>
 );
+
+EventPage.propTypes = {
+  pageContext: PropTypes.shape({
+    event: PropTypes.object.isRequired,
+    events: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }).isRequired,
+};
+
+export default EventPage;

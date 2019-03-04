@@ -1,17 +1,18 @@
-import React from "react";
-import { Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+/* eslint no-alert: 0 */
+import React from 'react';
+import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-import MobileNav from "./MobileNav";
-import "./Navbar.css";
-import riddimLogo from "../../images/shared/riddimLogo.png";
+import MobileNav from './MobileNav';
+import './Navbar.css';
+import riddimLogo from '../../images/shared/riddimLogo.png';
 
-const Navbar = props => {
-  const handleShopClick = e => {
+const Navbar = () => {
+  const handleShopClick = (e) => {
     e.preventDefault();
     alert(
-      "Our shop is currently under construction. Please check back again soon!"
+      'Our shop is currently under construction. Please check back again soon!',
     );
   };
   // const handleEventClick = e => {
@@ -26,7 +27,7 @@ const Navbar = props => {
       <ul className="navbar">
         <li key="logo">
           <Link to="/">
-            <img src={riddimLogo} alt="Riddim Logo" style={{ width: "50px" }} />
+            <img src={riddimLogo} alt="Riddim Logo" style={{ width: '50px' }} />
           </Link>
         </li>
         <li key="about">
@@ -34,19 +35,19 @@ const Navbar = props => {
         </li>
         <li key="events">
           <div className="dropdown">
-            <button className="dropdown-button">
+            <button className="dropdown-button" type="button">
               Events
               <FontAwesomeIcon
                 icon={faCaretDown}
-                style={{ marginLeft: "5px" }}
+                style={{ marginLeft: '5px', fontSize: '20px' }}
               />
             </button>
             <ul className="dropdown-content">
               <li key="upcoming" className="dropdown-item">
-                <Link to={`/events/riddim11`}>Upcoming</Link>
+                <Link to="/events/riddim11">Upcoming</Link>
               </li>
               <li key="past" className="dropdown-item">
-                <Link to={`/events/riddim1`}>Past</Link>
+                <Link to="/events/riddim1">Past</Link>
               </li>
             </ul>
           </div>
@@ -56,11 +57,11 @@ const Navbar = props => {
         </li>
         <li key="music">
           <div className="dropdown">
-            <button className="dropdown-button">
+            <button className="dropdown-button" type="button">
               Music
               <FontAwesomeIcon
                 icon={faCaretDown}
-                style={{ marginLeft: "5px" }}
+                style={{ marginLeft: '5px', fontSize: '20px' }}
               />
             </button>
             <ul className="dropdown-content">
@@ -83,7 +84,7 @@ const Navbar = props => {
         </li>
         <li key="cart">
           <Link to="/cart" onClick={handleShopClick}>
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '20px' }} />
           </Link>
         </li>
       </ul>

@@ -1,10 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components";
-import "./Layout.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import './Layout.css';
 
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
+import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 
 const LayoutDiv = styled.div`
   text-align: center;
@@ -20,14 +20,14 @@ const LayoutDiv = styled.div`
 
 const Layout = ({ children }) => (
   <LayoutDiv>
-    <Navbar/>
+    <Navbar />
     <main>{children}</main>
-    <Footer/>
+    <Footer />
   </LayoutDiv>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

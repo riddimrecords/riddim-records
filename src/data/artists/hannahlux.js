@@ -2,7 +2,7 @@ const info1 = `Self-taught singer, songwriter and musician,
   Hannah Lux, has been mesmerised by music her entire life and began writing
   her own at the age of 12; inspired by her colourful upbringing in Cardiff,
   the creative heart of Wales.`;
-  
+
 const info2 = `Lux continued to write and perform throughout her teenage years and her
   style continuously evolved until she was introduced to electronic music.
   Her first track was an ambient garage collaboration, 'Dangerous', under

@@ -10,7 +10,7 @@ const mcxl = {
     instagram: 'https://www.instagram.com/xl_mc/',
   },
   info: [info],
-  pic: 'McXLSquare.jpg'
+  pic: 'McXLSquare.jpg',
 };
 
 module.exports = { mcxl };

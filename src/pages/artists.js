@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import styled from "styled-components";
-import Layout from "../components/shared/Layout";
-import ArtistContainer from "../components/artists/ArtistContainer";
+import styled from 'styled-components';
+import Layout from '../components/shared/Layout';
+import ArtistContainer from '../components/artists/ArtistContainer';
+
 const { artists } = require('../data/artists');
 
 const ArtistsDiv = styled.div`
@@ -26,9 +27,7 @@ const Artists = () => (
       <title>Riddim Records | Artists</title>
     </Helmet>
     <ArtistsDiv className="artists">
-      {artists.map(artist => {
-        return <ArtistContainer key={artist.key} artist={artist} />;
-      })}
+      {artists.map(artist => <ArtistContainer key={artist.key} artist={artist} />)}
     </ArtistsDiv>
   </Layout>
 );

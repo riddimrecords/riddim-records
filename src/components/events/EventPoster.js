@@ -1,5 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
+import eventProps from './eventProps';
 
 const EventImg = styled.img`
   border: 5px solid white;
@@ -12,8 +13,13 @@ const EventImg = styled.img`
   }
 `;
 
-const EventPoster = props => (
-  <EventImg src={require(`../../images/events/${props.event.poster}`)} alt="Riddim Poster" />
-);
+const EventPoster = (props) => {
+  const { event } = props;
+  return (
+    <EventImg src={require(`../../images/events/${event.poster}`)} alt="Riddim Poster" />
+  );
+};
+
+EventPoster.propTypes = eventProps;
 
 export default EventPoster;

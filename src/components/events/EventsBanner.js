@@ -3,9 +3,11 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import PrevEvent from './PrevEvent';
 import NextEvent from './NextEvent';
+import eventProps from './eventProps';
 
 const EventsBanner = (props) => {
-  const cols = props.events.length + 2;
+  const { event, events } = props;
+  const cols = events.length + 2;
   const EventsBannerDiv = styled.div`
     margin: auto;
     width: ${cols >= 10 ? '60vw' : '30vw'};
@@ -19,20 +21,20 @@ const EventsBanner = (props) => {
     }
   `;
   return (
-    <EventsBannerDiv style={{gridTemplateColumns: `repeat(${cols}, 1fr)`}}>
-      <PrevEvent event={props.event} events={props.events}/>
-      {props.events.map(event => {
-        return (
-          <Link key={`${event.key}`} to={`/events/${event.name}`}>
-            <div className='eventBannerImg'>
-              <img src={require(`../../images/events/${event.poster}`)} alt={`${event.name} link`} style={{maxWidth: '100%'}}/>
-            </div>
-          </Link>
-        );
-      })}
-      <NextEvent event={props.event} events={props.events}/>
+    <EventsBannerDiv style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}>
+      <PrevEvent event={event} events={events} />
+      {events.map(e => (
+        <Link key={`${e.key}`} to={`/events/${e.name}`}>
+          <div className="eventBannerImg">
+            <img src={require(`../../images/events/${e.poster}`)} alt={`${e.name} link`} style={{ maxWidth: '100%' }} />
+          </div>
+        </Link>
+      ))}
+      <NextEvent event={event} events={events} />
     </EventsBannerDiv>
   );
 };
+
+EventsBanner.propTypes = eventProps;
 
 export default EventsBanner;

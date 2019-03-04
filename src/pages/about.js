@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import Layout from "../components/shared/Layout";
-import Section from "../components/about/Section";
-import Info from "../data/about";
+import Layout from '../components/shared/Layout';
+import Section from '../components/about/Section';
+import Info from '../data/about';
 
 const AboutDiv = styled.div`
   width: 50vw;
@@ -20,9 +20,7 @@ const AboutPage = () => (
       <title>Riddim Records | About</title>
     </Helmet>
     <AboutDiv>
-      {Info.map(brand => {
-        return <Section key={brand.name} brand={brand} />;
-      })}
+      {Info.map(brand => <Section key={brand.name} brand={brand} />)}
     </AboutDiv>
   </Layout>
 );

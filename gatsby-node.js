@@ -3,36 +3,35 @@ const { artists } = require('./src/data/artists');
 const { releases } = require('./src/data/releases');
 
 exports.createPages = ({ actions: { createPage } }) => {
-
-  pastEvents.forEach(event => {
+  pastEvents.forEach((event) => {
     createPage({
       path: `/events/${event.name}/`,
-      component: require.resolve("./src/templates/event.js"),
+      component: require.resolve('./src/templates/event.js'),
       context: { event, events: pastEvents },
-    })
-  })
+    });
+  });
 
-  upcomingEvents.forEach(event => {
+  upcomingEvents.forEach((event) => {
     createPage({
       path: `/events/${event.name}/`,
-      component: require.resolve("./src/templates/event.js"),
+      component: require.resolve('./src/templates/event.js'),
       context: { event, events: upcomingEvents },
-    })
-  })
+    });
+  });
 
-  artists.forEach(artist => {
+  artists.forEach((artist) => {
     createPage({
       path: `/artists/${artist.key}`,
-      component: require.resolve("./src/templates/artist.js"),
+      component: require.resolve('./src/templates/artist.js'),
       context: { artist },
-    })
-  })
+    });
+  });
 
-  releases.forEach(release => {
+  releases.forEach((release) => {
     createPage({
       path: `/music/releases/${release.key}`,
-      component: require.resolve("./src/templates/release.js"),
+      component: require.resolve('./src/templates/release.js'),
       context: { release },
-    })
-  })
-}
+    });
+  });
+};

@@ -1,5 +1,7 @@
+/* eslint react/no-danger: 0 */
 import React from 'react';
 import styled from 'styled-components';
+import eventProps from './eventProps';
 
 const EventLocationDiv = styled.div`
   width: 100%;
@@ -9,10 +11,15 @@ const EventLocationDiv = styled.div`
   justify-self: center;
 `;
 
-const EventLocation = (props) => (
-  <EventLocationDiv>
-    <div dangerouslySetInnerHTML={{ __html: props.event.location}}></div>
-  </EventLocationDiv>
-);
+const EventLocation = (props) => {
+  const { event } = props;
+  return (
+    <EventLocationDiv>
+      <div dangerouslySetInnerHTML={{ __html: event.location }} />
+    </EventLocationDiv>
+  );
+};
+
+EventLocation.propTypes = eventProps;
 
 export default EventLocation;

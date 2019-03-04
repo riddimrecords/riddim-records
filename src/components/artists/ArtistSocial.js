@@ -1,12 +1,13 @@
-import React from "react";
-import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSoundcloud, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import "./ArtistSocial.css";
-import aor from "../../images/shared/aor.png";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSoundcloud, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import artistProps from './artistProps';
+import './ArtistSocial.css';
+import aor from '../../images/shared/aor.png';
 
-const ArtistSocial = props => {
-  const artistSocialCols = `repeat(${Object.keys(props.artist.social).length}, 1fr)`;
+const ArtistSocial = (props) => {
+  const { artist } = props;
+  const artistSocialCols = `repeat(${Object.keys(artist.social).length}, 1fr)`;
   return (
     <div
       className="artistSocial"
@@ -14,36 +15,30 @@ const ArtistSocial = props => {
         gridTemplateColumns: artistSocialCols,
       }}
     >
-      {props.artist.social.soundcloud ? (
-        <a href={props.artist.social.soundcloud} target="_blank" rel="noopener noreferrer">
+      {artist.social.soundcloud ? (
+        <a href={artist.social.soundcloud} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon className="artistSocialIcon" icon={faSoundcloud} />
-        </a>) : "" }
-      { props.artist.social.facebook ? (
-        <a href={props.artist.social.facebook} target='_blank' rel="noopener noreferrer">
-          <FontAwesomeIcon className="artistSocialIcon" icon={faFacebook} />
-        </a> ) : "" }
-      {props.artist.social.instagram ? (
-        <a href={props.artist.social.instagram} target='_blank' rel="noopener noreferrer">
-          <FontAwesomeIcon className="artistSocialIcon" icon={faInstagram} />
-        </a>) : "" }
-      {props.artist.social.aor ? (
-        <a href={props.artist.social.aor} target="_blank" rel="noopener noreferrer">
-          <img src={aor} alt="AOR Mix" style={{ width: "65px" }} />
         </a>
-      ) : "" }
+      ) : '' }
+      { artist.social.facebook ? (
+        <a href={artist.social.facebook} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon className="artistSocialIcon" icon={faFacebook} />
+        </a>
+      ) : '' }
+      {artist.social.instagram ? (
+        <a href={artist.social.instagram} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon className="artistSocialIcon" icon={faInstagram} />
+        </a>
+      ) : '' }
+      {artist.social.aor ? (
+        <a href={artist.social.aor} target="_blank" rel="noopener noreferrer">
+          <img src={aor} alt="AOR Mix" style={{ width: '65px' }} />
+        </a>
+      ) : '' }
     </div>
   );
 };
 
-ArtistSocial.propTypes = {
-  artist: PropTypes.shape({
-    social: PropTypes.shape({
-      soundcloud: PropTypes.string,
-      facebook: PropTypes.string,
-      instagram: PropTypes.string,
-      aor: PropTypes.string
-    })
-  })
-}
+ArtistSocial.propTypes = artistProps;
 
 export default ArtistSocial;

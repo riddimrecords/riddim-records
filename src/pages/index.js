@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import Layout from "../components/shared/Layout";
+import Layout from '../components/shared/Layout';
 import homepageImg from '../images/home/homepage.png';
 
 const HomeDiv = styled.div`
@@ -21,9 +21,9 @@ const IndexPage = () => (
       <title>Riddim Records | Home</title>
     </Helmet>
     <HomeDiv>
-      <HomeImg src={homepageImg} alt='Mr Riddim'/>
+      <HomeImg src={homepageImg} alt="Mr Riddim" />
     </HomeDiv>
   </Layout>
-)
+);
 
 export default IndexPage;

@@ -1,25 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import './ArtistContainer.css'
+import artistProps from './artistProps';
+import './ArtistContainer.css';
 
-const ArtistContainer = props => (
-  <Link to={`/artists/${props.artist.key}`}>
-    <div className='artist' key={props.artist.name}>
-      <img className='artistPic' src={require(`../../images/artists/${props.artist.pic}`)} alt={props.artist.name}/>
-      <div className="artistMiddle">
-        <div className="artistText">{props.artist.name}</div>
+const ArtistContainer = (props) => {
+  const { artist } = props;
+  return (
+    <Link to={`/artists/${artist.key}`}>
+      <div className="artist" key={artist.name}>
+        <img className="artistPic" src={require(`../../images/artists/${artist.pic}`)} alt={artist.name} />
+        <div className="artistMiddle">
+          <div className="artistText">{artist.name}</div>
+        </div>
       </div>
-    </div>
-  </Link>
-);
+    </Link>
+  );
+};
 
-ArtistContainer.propTypes = {
-  artist: PropTypes.shape({
-    key: PropTypes.string,
-    name: PropTypes.string,
-    pic: PropTypes.string,
-  })
-}
+ArtistContainer.propTypes = artistProps;
 
 export default ArtistContainer;

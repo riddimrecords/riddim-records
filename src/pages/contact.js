@@ -29,18 +29,16 @@ const Logo = styled.img`
   width: 100px;
 `;
 
-const Contact = (props) => (
+const Contact = () => (
   <Layout>
     <Helmet>
       <title>Riddim Records | Contact</title>
     </Helmet>
     <ContactDiv>
       <h1>Contact</h1>
-      <Logo src={riddim} alt="Riddim Logo"/>
+      <Logo src={riddim} alt="Riddim Logo" />
       <ContactList>
-        {Info.map((person) => {
-          return <Panel person={person} key={person.key}/>;
-        })}
+        {Info.map(person => <Panel person={person} key={person.key} />)}
       </ContactList>
     </ContactDiv>
   </Layout>

@@ -1,32 +1,27 @@
-import React from "react";
-import PropTypes from 'prop-types';
-import EventPoster from "./EventPoster";
-import EventDate from "./EventDate";
+import React from 'react';
+import EventPoster from './EventPoster';
+import EventDate from './EventDate';
 import EventLocation from './EventLocation';
-import "./EventInfo.css";
+import eventProps from './eventProps';
+import './EventInfo.css';
 
-const EventInfo = props => (
-  <div className="eventInfo">
-    <EventPoster event={props.event}/>
-    <EventDate event={props.event} events={props.events}/>
-    <p className="eventDesc" style={{fontSize: '23px'}}>{props.event.info}</p>
-    <div className="eventArtists">
-      <ul style={{listStyleType: 'none', padding: '0'}}>
-        {props.event.artists.map((artist, index) => {
-          return <li key={index}>{artist}</li>;
-        })}
-      </ul>
+const EventInfo = (props) => {
+  const { event, events } = props;
+  return (
+    <div className="eventInfo">
+      <EventPoster event={event} />
+      <EventDate event={event} events={events} />
+      <p className="eventDesc" style={{ fontSize: '23px' }}>{event.info}</p>
+      <div className="eventArtists">
+        <ul style={{ listStyleType: 'none', padding: '0' }}>
+          {event.artists.map(artist => <li key={artist}>{artist}</li>)}
+        </ul>
+      </div>
+      <EventLocation event={event} />
     </div>
-    <EventLocation event={props.event}/>
-  </div>
-);
-
-EventDate.propTypes = {
-  event: PropTypes.shape({
-    info: PropTypes.string,
-    artists: PropTypes.array,
-  }),
-  events: PropTypes.array,
+  );
 };
+
+EventInfo.propTypes = eventProps;
 
 export default EventInfo;

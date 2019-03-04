@@ -15,19 +15,19 @@ const info3 = `Pursuing his passion for the fast-paced genre even further, Masco
   Records has already left an imprint on the scene, laying a strong foundation for 
   future success with sights set high among the biggest and best drum and bass brands.`;
 
-const info4 = `For bookings, please contact: Ben@riddimrecords.co.uk`;
+const info4 = 'For bookings, please contact: Ben@riddimrecords.co.uk';
 
 const mascot = {
   key: 'mascot',
   name: 'Mascot',
   social: {
     soundcloud: 'https://soundcloud.com/djmascot',
-    facebook: 'https://www.facebook.com/mascotmusic/', 
-    instagram: 'https://instagram.com/mascotdnb', 
+    facebook: 'https://www.facebook.com/mascotmusic/',
+    instagram: 'https://instagram.com/mascotdnb',
     aor: 'https://soundcloud.com/riddimrecordsuk/aor-mascot-promo',
   },
   info: [info1, info2, info3, info4],
-  pic: 'MascotSquare.jpg'
+  pic: 'MascotSquare.jpg',
 };
 
 module.exports = { mascot };

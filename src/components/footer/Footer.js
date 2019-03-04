@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-import Newsletter from "./Newsletter";
-import WebLinks from "./WebLinks";
-import SocialLinks from "./SocialLinks";
+import Newsletter from './Newsletter';
+import WebLinks from './WebLinks';
+import SocialLinks from './SocialLinks';
 
 const FooterContainer = styled.footer`
   color: #888787;
@@ -32,15 +32,17 @@ const FooterLine = styled.hr`
   border: solid 1px white;
 `;
 
-const Footer = props => (
+const Footer = () => (
   <div>
-    <FooterLine/>
+    <FooterLine />
     <FooterContainer className="footer">
       <Newsletter />
-      <div className="middle" style={{ gridArea: "middle"}}>
+      <div className="middle" style={{ gridArea: 'middle' }}>
         <WebLinks />
-        <p style={{ marginTop: "5px", fontSize: "20px" }}>
-          &copy; Riddim Records {new Date().getFullYear()}
+        <p style={{ marginTop: '5px', fontSize: '20px' }}>
+          &copy; Riddim Records
+          {' '}
+          {new Date().getFullYear()}
         </p>
       </div>
       <SocialLinks />

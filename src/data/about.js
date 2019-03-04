@@ -4,26 +4,26 @@ import riddimRecordsLogo from '../images/shared/riddimRecords.png';
 
 const riddim = {
   name: 'Riddim',
-  info: 
+  info:
   <div>
     <p>
       Riddim is an events company specializing in all things drum and bass.
       Since its humble beginnings in 2016, the brand has quickly gone from
-      strength-to-strength to become one of the UK's most promising drum
+      strength-to-strength to become one of the UK&apos;s most promising drum
       and bass event brands.
     </p>
     <p>
-    The brand's ethos is simple - to host the best events while also
+    The brand&apos;s ethos is simple - to host the best events while also
     providing local talent with a platform to support some of the most
     successful drum and bass artists in the industry.
     </p>
   </div>,
-  logo: riddimLogo
+  logo: riddimLogo,
 };
 
 const riddimRecords = {
   name: 'Riddim Records',
-  info: 
+  info:
   <div>
     <p>
       Riddim Records, the sister company to Riddim, is an exciting and
@@ -35,7 +35,7 @@ const riddimRecords = {
       on a seat among the biggest and best labels in drum and bass.
     </p>
   </div>,
-  logo: riddimRecordsLogo
+  logo: riddimRecordsLogo,
 };
 
 export default [riddim, riddimRecords];

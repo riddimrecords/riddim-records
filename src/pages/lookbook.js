@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import Layout from "../components/shared/Layout";
-import './Lookbook.css';
+import Layout from '../components/shared/Layout';
+import './lookbook.css';
 import lookbook1 from '../images/lookbook/lookbook1.jpg';
 import lookbook2 from '../images/lookbook/lookbook2.jpg';
 import lookbook3 from '../images/lookbook/lookbook3.jpg';
@@ -38,13 +38,11 @@ const Lookbook = () => (
       <title>Riddim Records | Lookbook</title>
     </Helmet>
     <LookbookGrid>
-      {lookbookImages.map((image, index) => {
-        return (
-          <div key={index} className='lookbookImg'>
-            <img src={image} alt={`Lookbook ${lookbookImages.indexOf(image) + 1}`}/>
-          </div>
-        );
-      })}
+      {lookbookImages.map(image => (
+        <div key={image} className="lookbookImg">
+          <img src={image} alt={`Lookbook ${lookbookImages.indexOf(image) + 1}`} />
+        </div>
+      ))}
     </LookbookGrid>
   </Layout>
 );

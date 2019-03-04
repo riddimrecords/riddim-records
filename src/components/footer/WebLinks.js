@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 
 const WebLinksDiv = styled.ul`
   padding: 0;
@@ -15,7 +15,7 @@ const WebLink = styled(Link)`
   padding: 3px 0px;
 `;
 
-const WebLinks = props => (
+const WebLinks = () => (
   <WebLinksDiv>
     <WebLink to="/about">
       About

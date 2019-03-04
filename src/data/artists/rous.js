@@ -1,7 +1,7 @@
 const info1 = `Warren Rousseau aka Rous is a Kent-born DJ and
   producer. Rous has developed an impressive skillset in his short career,
   successfully carving out his brand and passion for all things drum and bass.`;
-  
+
 const info2 = `With a rich background in metal and rock it was inevitable that music
   was going to play a pivotal role in Rous' future. Rous discovered drum
   and bass through Netsky's 'I Refuse' at age 13 and with his eyes and ears
