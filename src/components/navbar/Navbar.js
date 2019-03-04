@@ -39,7 +39,7 @@ const Navbar = () => {
               Events
               <FontAwesomeIcon
                 icon={faCaretDown}
-                style={{ marginLeft: '5px', fontSize: '20px' }}
+                style={{ marginLeft: '5px', fontSize: '16px' }}
               />
             </button>
             <ul className="dropdown-content">
@@ -61,7 +61,7 @@ const Navbar = () => {
               Music
               <FontAwesomeIcon
                 icon={faCaretDown}
-                style={{ marginLeft: '5px', fontSize: '20px' }}
+                style={{ marginLeft: '5px', fontSize: '16px' }}
               />
             </button>
             <ul className="dropdown-content">
@@ -84,7 +84,7 @@ const Navbar = () => {
         </li>
         <li key="cart">
           <Link to="/cart" onClick={handleShopClick}>
-            <FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '20px' }} />
+            <FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '16px' }} />
           </Link>
         </li>
       </ul>

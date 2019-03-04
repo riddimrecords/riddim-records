@@ -10,7 +10,7 @@
   transition: 0.5s;
 }
 
-.navbar > li:hover {
+.navbar > li:hover, .navbar > li > .dropdown > ul > li:hover {
   text-decoration: underline;
 }
 
