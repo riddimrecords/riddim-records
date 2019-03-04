@@ -1,12 +1,17 @@
 /* eslint no-alert: 0 */
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-
+import '@fortawesome/fontawesome-svg-core/styles.css'; // ensure icon loaded before render
 import MobileNav from './MobileNav';
 import './Navbar.css';
 import riddimLogo from '../../images/shared/riddimLogo.png';
+
+const Icon = styled(FontAwesomeIcon)`
+  font-size: 16px;
+`;
 
 const Navbar = () => {
   const handleShopClick = (e) => {
@@ -37,9 +42,9 @@ const Navbar = () => {
           <div className="dropdown">
             <button className="dropdown-button" type="button">
               Events
-              <FontAwesomeIcon
+              <Icon
                 icon={faCaretDown}
-                style={{ marginLeft: '5px', fontSize: '16px' }}
+                style={{ marginLeft: '5px' }}
               />
             </button>
             <ul className="dropdown-content">
@@ -59,9 +64,9 @@ const Navbar = () => {
           <div className="dropdown">
             <button className="dropdown-button" type="button">
               Music
-              <FontAwesomeIcon
+              <Icon
                 icon={faCaretDown}
-                style={{ marginLeft: '5px', fontSize: '16px' }}
+                style={{ marginLeft: '5px' }}
               />
             </button>
             <ul className="dropdown-content">
@@ -84,7 +89,7 @@ const Navbar = () => {
         </li>
         <li key="cart">
           <Link to="/cart" onClick={handleShopClick}>
-            <FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '16px' }} />
+            <Icon icon={faShoppingCart} />
           </Link>
         </li>
       </ul>
