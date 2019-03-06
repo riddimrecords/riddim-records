@@ -20,7 +20,7 @@ const WebLinks = () => (
     <WebLink to="/about">
       About
     </WebLink>
-    <WebLink to="/events/past">
+    <WebLink to="/events/riddim1">
       Events
     </WebLink>
     <WebLink to="/artists">
