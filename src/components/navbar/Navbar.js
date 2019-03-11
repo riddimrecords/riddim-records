@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint no-alert: 0 */
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +9,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'; // ensure icon loaded bef
 import MobileNav from './MobileNav';
 import './Navbar.css';
 import riddimLogo from '../../images/shared/riddimLogo.png';
+import { pastEvents, upcomingEvents } from '../../data/events';
 
 const Icon = styled(FontAwesomeIcon)`
   font-size: 16px;
@@ -20,12 +22,12 @@ const Navbar = () => {
       'Our shop is currently under construction. Please check back again soon!',
     );
   };
-  // const handleEventClick = e => {
-  //   e.preventDefault();
-  //   alert(
-  //     "There are currently no upcoming events, but please check back again soon!"
-  //   );
-  // };
+  const handleEventClick = (e) => {
+    e.preventDefault();
+    return upcomingEvents.length === 0
+      ? alert('There are currently no upcoming events, but please check back again soon!')
+      : navigate(`events/${upcomingEvents[0].name}`);
+  };
 
   return (
     <nav>
@@ -49,10 +51,13 @@ const Navbar = () => {
             </button>
             <ul className="dropdown-content">
               <li key="upcoming" className="dropdown-item">
-                <Link to="/events/riddim11">Upcoming</Link>
+                <Link onClick={handleEventClick}>
+                  Upcoming
+                </Link>
+                {/* <Link to={`/events/${upcomingEvents[0].name}`}>Upcoming</Link> */}
               </li>
               <li key="past" className="dropdown-item">
-                <Link to="/events/riddim1">Past</Link>
+                <Link to={`/events/${pastEvents[0].name}`}>Past</Link>
               </li>
             </ul>
           </div>

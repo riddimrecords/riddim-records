@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { pastEvents, upcomingEvents } from '../../data/events';
 
 const WebLinksDiv = styled.ul`
   padding: 0;
@@ -20,7 +21,7 @@ const WebLinks = () => (
     <WebLink to="/about">
       About
     </WebLink>
-    <WebLink to="/events/riddim1">
+    <WebLink to={`/events/${upcomingEvents.length === 0 ? pastEvents[0].name : upcomingEvents[0].name}`}>
       Events
     </WebLink>
     <WebLink to="/artists">
