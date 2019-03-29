@@ -3,37 +3,49 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { pastEvents, upcomingEvents } from '../../data/events';
 
-const WebLinksDiv = styled.ul`
+const WebLinksList = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: column;
+  li {
+    list-style-type: none;
+    padding: 5px 0px;
+  }
 `;
 
 const WebLink = styled(Link)`
-  list-style-type: none;
   text-decoration: none;
   color: #888787;
-  padding: 3px 0px;
 `;
 
 const WebLinks = () => (
-  <WebLinksDiv>
-    <WebLink to="/about">
-      About
-    </WebLink>
-    <WebLink to={`/events/${upcomingEvents.length === 0 ? pastEvents[0].name : upcomingEvents[0].name}`}>
-      Events
-    </WebLink>
-    <WebLink to="/artists">
-      Artists
-    </WebLink>
-    <WebLink to="/music/releases">
-      Releases
-    </WebLink>
-    <WebLink to="/contact">
-      Contact
-    </WebLink>
-  </WebLinksDiv>
+  <WebLinksList>
+    <li>
+      <WebLink to="/about">
+        About
+      </WebLink>
+    </li>
+    <li>
+      <WebLink to={`/events/${upcomingEvents.length === 0 ? pastEvents[0].name : upcomingEvents[0].name}`}>
+        Events
+      </WebLink>
+    </li>
+    <li>
+      <WebLink to="/artists">
+        Artists
+      </WebLink>
+    </li>
+    <li>
+      <WebLink to="/music/releases">
+        Releases
+      </WebLink>
+    </li>
+    <li>
+      <WebLink to="/contact">
+        Contact
+      </WebLink>
+    </li>
+  </WebLinksList>
 );
 
 export default WebLinks;

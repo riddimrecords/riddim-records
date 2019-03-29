@@ -14,7 +14,7 @@ const Newsletter = () => {
       <div id="mc_embed_signup" style={{ fontSize: '10px' }}>
         <form action="https://riddimrecords.us17.list-manage.com/subscribe/post?u=8706a828f346929e41c0279cd&amp;id=ed87a77b86" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
           <h2 style={{ display: 'inline' }}>Subscribe to our mailing list </h2>
-          <span style={{ position: 'relative' }}>
+          <div style={{ position: 'relative' }}>
             <FontAwesomeIcon icon={faInfoCircle} onClick={handleInfoClick} />
             <p className="mailChimpInfo">
               We use Mailchimp as our marketing platform.
@@ -24,7 +24,7 @@ const Newsletter = () => {
               {' '}
               <a href="https://mailchimp.com/legal/" target="_blank" rel="noopener noreferrer">here.</a>
             </p>
-          </span>
+          </div>
           <div id="mc_embed_signup_scroll">
             <div className="inputContainer">
               <label htmlFor="mce-FNAME" style={{ display: 'none' }}>First Name </label>
