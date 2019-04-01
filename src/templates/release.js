@@ -14,7 +14,7 @@ const ReleasePage = ({ pageContext: { release } }) => (
       <h1 className="releaseTitle">
         Cat No.
         {' '}
-        {release.name}
+        {release.cat}
       </h1>
       <h2 className="releaseDate">
         Release Date:
@@ -26,11 +26,14 @@ const ReleasePage = ({ pageContext: { release } }) => (
       </div>
       <div className="releaseInfo">
         {release.info.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-        <a style={{ color: 'white' }} href={release.fanlink} target="_blank" rel="noopener noreferrer">Stream/Download</a>
+        {release.released ? <a style={{ color: 'white' }} href={release.fanlink} target="_blank" rel="noopener noreferrer">Stream/Download</a>
+          : <a style={{ color: 'white' }} href={release.preorder} target="_blank" rel="noopener noreferrer">Preorder</a>}
       </div>
-      <div className="releaseSC" style={{ margin: '50px auto 0px auto', width: '75%' }}>
-        <div dangerouslySetInnerHTML={{ __html: release.soundcloud }} />
-      </div>
+      {release.soundcloud && (
+        <div className="releaseSC" style={{ margin: '50px auto 0px auto', width: '75%' }}>
+          <div dangerouslySetInnerHTML={{ __html: release.soundcloud }} />
+        </div>
+      )}
     </div>
   </Layout>
 );

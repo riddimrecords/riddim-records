@@ -7,8 +7,10 @@ const info2 = `Adding a darker spin to Restrained Light, artist Narrate breathes
 
 const rr002 = {
   key: 'rr002',
+  cat: 'RR002',
   name: 'RR002',
   releaseDate: '18.01.19',
+  released: true,
   info: [info1, info2],
   pic: 'rr002Cover.jpg',
   soundcloud: '<iframe title="RR02" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/645856632&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',

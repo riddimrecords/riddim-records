@@ -22,11 +22,13 @@ const info4 = `Ep. 1's final track comes from Norwegian artist Yassily. Inherent
 
 const rr001 = {
   key: 'rr001',
+  cat: 'RR001',
   name: 'RR001',
   releaseDate: '08.06.18',
+  released: true,
   info: [info1, info2, info3, info4],
   pic: 'rr001Cover.jpg',
-  soundcloud: '<iframe title="RR02" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/500034594&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',
+  soundcloud: '<iframe title="RR01" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/500034594&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>',
   fanlink: 'https://fanlink.to/RR001',
 };
 
