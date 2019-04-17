@@ -1,21 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Layout from '../components/shared/Layout';
 import './lookbook.css';
-import lookbook1 from '../images/lookbook/lookbook1.jpg';
-import lookbook2 from '../images/lookbook/lookbook2.jpg';
-import lookbook3 from '../images/lookbook/lookbook3.jpg';
-import lookbook4 from '../images/lookbook/lookbook4.jpg';
-import lookbook5 from '../images/lookbook/lookbook5.jpg';
-import lookbook6 from '../images/lookbook/lookbook6.jpg';
-import lookbook7 from '../images/lookbook/lookbook7.jpg';
-import lookbook8 from '../images/lookbook/lookbook8.jpg';
-import lookbook9 from '../images/lookbook/lookbook9.jpg';
-import lookbook10 from '../images/lookbook/lookbook10.jpg';
-
-const lookbookImages = [lookbook1, lookbook2, lookbook3, lookbook4, lookbook5, lookbook6, lookbook7,
-  lookbook8, lookbook9, lookbook10];
 
 const LookbookGrid = styled.div`
   width: 80vw;
@@ -32,19 +22,103 @@ const LookbookGrid = styled.div`
   }
 `;
 
-const Lookbook = () => (
-  <Layout>
-    <Helmet>
-      <title>Riddim Records | Lookbook</title>
-    </Helmet>
-    <LookbookGrid>
-      {lookbookImages.map(image => (
-        <div key={image} className="lookbookImg">
-          <img src={image} alt={`Lookbook ${lookbookImages.indexOf(image) + 1}`} />
-        </div>
-      ))}
-    </LookbookGrid>
-  </Layout>
-);
+const LookbookPage = ({ data }) => {
+  const lookbookImages = [data.lookbook1, data.lookbook2, data.lookbook3,
+    data.lookbook4, data.lookbook5, data.lookbook6, data.lookbook7,
+    data.lookbook8, data.lookbook9, data.lookbook10];
+  return (
+    <Layout>
+      <Helmet>
+        <title>Riddim Records | Lookbook</title>
+      </Helmet>
+      <LookbookGrid>
+        {lookbookImages.map(image => (
+          <div key={image} className="lookbookImg">
+            <Img fluid={image.childImageSharp.fluid} />
+          </div>
+        ))}
+      </LookbookGrid>
+    </Layout>
+  );
+};
 
-export default Lookbook;
+LookbookPage.propTypes = {
+  data: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+};
+
+export default LookbookPage;
+
+export const pageQuery = graphql`
+  query {
+    lookbook1: file(relativePath: {eq: "lookbook/lookbook1.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook2: file(relativePath: {eq: "lookbook/lookbook2.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook3: file(relativePath: {eq: "lookbook/lookbook3.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook4: file(relativePath: {eq: "lookbook/lookbook4.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook5: file(relativePath: {eq: "lookbook/lookbook5.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook6: file(relativePath: {eq: "lookbook/lookbook6.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook7: file(relativePath: {eq: "lookbook/lookbook7.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook8: file(relativePath: {eq: "lookbook/lookbook8.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook9: file(relativePath: {eq: "lookbook/lookbook9.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lookbook10: file(relativePath: {eq: "lookbook/lookbook10.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

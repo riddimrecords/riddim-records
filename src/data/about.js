@@ -1,6 +1,6 @@
 import React from 'react';
-import riddimLogo from '../images/shared/riddim.png';
-import riddimRecordsLogo from '../images/shared/riddimRecords.png';
+import riddimImg from '../images/shared/riddim.png';
+import riddimRecordsImg from '../images/shared/riddimRecords.png';
 
 const riddim = {
   name: 'Riddim',
@@ -18,7 +18,7 @@ const riddim = {
     successful drum and bass artists in the industry.
     </p>
   </div>,
-  logo: riddimLogo,
+  logo: riddimImg,
 };
 
 const riddimRecords = {
@@ -35,7 +35,7 @@ const riddimRecords = {
       on a seat among the biggest and best labels in drum and bass.
     </p>
   </div>,
-  logo: riddimRecordsLogo,
+  logo: riddimRecordsImg,
 };
 
 export default [riddim, riddimRecords];

@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 import Layout from '../components/shared/Layout';
 import Section from '../components/about/Section';
 import Info from '../data/about';
