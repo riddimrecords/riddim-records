@@ -12,7 +12,7 @@ const HomeDiv = styled.div`
   margin: auto;
   margin-top: 80px;
   .homeImg { 
-    max-width: 50%;
+    max-width: 48%;
     margin: auto;
   }
   @media screen and (max-width: 992px) {
@@ -49,7 +49,7 @@ export const pageQuery = graphql`
   query {
     homeImg: file(relativePath: {eq: "home/homepage.png"}) {
       childImageSharp {
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 1000, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
