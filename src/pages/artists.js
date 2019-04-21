@@ -22,7 +22,6 @@ const ArtistsDiv = styled.div`
 
 const Artists = ({ data }) => {
   const artists = data.allArtistsJson.edges;
-  console.log(artists);
   return (
     <Layout>
       <Helmet>
