@@ -1,5 +1,6 @@
 .eventDesc {
   grid-area: eventDesc;
+  font-size: 23px;
 }
 
 /* .eventInfoGrid {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import PrevEvent from './PrevEvent';
 import NextEvent from './NextEvent';
 import eventProps from './eventProps';
@@ -24,9 +25,10 @@ const EventsBanner = (props) => {
     <EventsBannerDiv style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}>
       <PrevEvent event={event} events={events} />
       {events.map(e => (
-        <Link key={`${e.key}`} to={`/events/${e.name}`}>
+        <Link key={`${e.node.key}`} to={`/events/${e.node.name}`}>
           <div className="eventBannerImg">
-            <img src={require(`../../images/events/${e.poster}`)} alt={`${e.name} link`} style={{ maxWidth: '100%' }} />
+            <Img fluid={e.node.poster.childImageSharp.fluid} alt={`${e.node.name} link`} />
+            {/* <img src={require(`../../images/events/${e.poster}`)} alt={`${e.name} link`} style={{ maxWidth: '100%' }} /> */}
           </div>
         </Link>
       ))}

@@ -11,7 +11,7 @@ const EventInfo = (props) => {
     <div className="eventInfo">
       <EventPoster event={event} />
       <EventDate event={event} events={events} />
-      <p className="eventDesc" style={{ fontSize: '23px' }}>{event.info}</p>
+      <p className="eventDesc">{event.info}</p>
       <div className="eventArtists">
         <ul style={{ listStyleType: 'none', padding: '0' }}>
           {event.artists.map(artist => <li key={artist}>{artist}</li>)}

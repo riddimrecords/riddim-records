@@ -1,21 +1,47 @@
-const { pastEvents, upcomingEvents } = require('./src/data/events.js');
+// const { pastEvents, upcomingEvents } = require('./src/data/events.js');
 const { artists } = require('./src/data/artists');
 const { releases } = require('./src/data/releases');
 
-exports.createPages = ({ actions: { createPage } }) => {
-  pastEvents.forEach((event) => {
+exports.createPages = async ({ actions: { createPage }, graphql }) => {
+  const results = await graphql(`
+    query {
+      allPasteventsJson {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+      allUpcomingeventsJson {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  if (results.error) {
+    console.error('Something went wrong');
+    return;
+  }
+
+  results.data.allPasteventsJson.edges.forEach((edge) => {
+    const event = edge.node;
     createPage({
       path: `/events/${event.name}/`,
       component: require.resolve('./src/templates/event.js'),
-      context: { event, events: pastEvents },
+      context: { name: event.name, type: 'past' },
     });
   });
 
-  upcomingEvents.forEach((event) => {
+  results.data.allUpcomingeventsJson.edges.forEach((edge) => {
+    const event = edge.node;
     createPage({
       path: `/events/${event.name}/`,
       component: require.resolve('./src/templates/event.js'),
-      context: { event, events: upcomingEvents },
+      context: { name: event.name, type: 'upcoming' },
     });
   });
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import eventProps from './eventProps';
 
-const EventImg = styled.img`
+const EventImg = styled.div`
   border: 5px solid white;
   max-width: 30vw;
   height: auto;
@@ -11,12 +12,19 @@ const EventImg = styled.img`
   @media screen and (max-width: 768px) {
     max-width: 50vw;
   }
+  .eventImg { 
+    width: 30vw;
+  }
 `;
 
 const EventPoster = (props) => {
   const { event } = props;
   return (
-    <EventImg src={require(`../../images/events/${event.poster}`)} alt="Riddim Poster" />
+    <EventImg fluid={event.poster.childImageSharp.fluid}>
+      <Img className="eventImg" fluid={event.poster.childImageSharp.fluid} />
+    </EventImg>
+    // <EventImg fluid={event.poster.childImageSharp.fluid} alt="Riddim Poster" />
+    // <EventImg src={require(`../../images/events/${event.poster}`)} alt="Riddim Poster" />
   );
 };
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
-const Logo = styled.img`
+const Logo = styled(Img)`
   width: 100px;
+  margin: auto;
 `;
 
 const Section = (props) => {
@@ -12,7 +14,7 @@ const Section = (props) => {
     <div>
       <h1>{brand.name}</h1>
       <div>{brand.info}</div>
-      <Logo src={brand.logo} alt={`${brand.name} Logo`} className="aboutLogo" />
+      <Logo fluid={brand.logo} className="aboutLogo" alt={`${brand.name} logo`} />
     </div>
   );
 };

@@ -34,7 +34,6 @@ const IndexPage = ({ data }) => (
     </Helmet>
     <HomeDiv>
       <Img className="homeImg" fluid={data.homeImg.childImageSharp.fluid} alt="Mr Riddim" />
-      {/* <img className="homeImg" src={homepageImg} /> */}
     </HomeDiv>
   </Layout>
 );

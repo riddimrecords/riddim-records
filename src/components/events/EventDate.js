@@ -11,7 +11,7 @@ const EventDate = (props) => {
       <Link
         className="mobileButtonPrev"
         to={`/events/riddim${
-          event.key === events[0].key ? events[events.length - 1].key : event.key - 1
+          event.key === events[0].node.key ? events[events.length - 1].key : event.key - 1
         }`}
       >
         <FontAwesomeIcon icon={faArrowLeft} />
@@ -22,7 +22,7 @@ const EventDate = (props) => {
       <Link
         className="mobileButtonNext"
         to={`/events/riddim${
-          event.key === events[events.length - 1].key ? events[0].key : event.key + 1
+          event.key === events[events.length - 1].key ? events[0].node.key : event.key + 1
         }`}
       >
         <FontAwesomeIcon icon={faArrowRight} />

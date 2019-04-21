@@ -32,9 +32,9 @@ const LookbookPage = ({ data }) => {
         <title>Riddim Records | Lookbook</title>
       </Helmet>
       <LookbookGrid>
-        {lookbookImages.map(image => (
+        {lookbookImages.map((image, index) => (
           <div key={image} className="lookbookImg">
-            <Img fluid={image.childImageSharp.fluid} />
+            <Img fluid={image.childImageSharp.fluid} alt={`Lookbook ${index + 1} image`} />
           </div>
         ))}
       </LookbookGrid>
