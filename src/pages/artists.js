@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/shared/Layout';
 import ArtistContainer from '../components/artists/ArtistContainer';
-
-const { artists } = require('../data/artists');
 
 const ArtistsDiv = styled.div`
   width: 80vw;
@@ -21,15 +20,39 @@ const ArtistsDiv = styled.div`
   }
 `;
 
-const Artists = () => (
-  <Layout>
-    <Helmet>
-      <title>Riddim Records | Artists</title>
-    </Helmet>
-    <ArtistsDiv className="artists">
-      {artists.map(artist => <ArtistContainer key={artist.key} artist={artist} />)}
-    </ArtistsDiv>
-  </Layout>
-);
+const Artists = ({ data }) => {
+  const artists = data.allArtistsJson.edges;
+  console.log(artists);
+  return (
+    <Layout>
+      <Helmet>
+        <title>Riddim Records | Artists</title>
+      </Helmet>
+      <ArtistsDiv className="artists">
+        {artists.map(artist => <ArtistContainer key={artist.node.key} artist={artist} />)}
+      </ArtistsDiv>
+    </Layout>
+  );
+};
 
 export default Artists;
+
+export const query = graphql`
+  query {
+    allArtistsJson {
+      edges {
+        node {
+          key
+          name
+          pic {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

@@ -1,5 +1,4 @@
-// const { pastEvents, upcomingEvents } = require('./src/data/events.js');
-const { artists } = require('./src/data/artists');
+// const { artists } = require('./src/data/artists');
 const { releases } = require('./src/data/releases');
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
@@ -16,6 +15,13 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         edges {
           node {
             name
+          }
+        }
+      }
+      allArtistsJson {
+        edges {
+          node {
+            key
           }
         }
       }
@@ -45,13 +51,22 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     });
   });
 
-  artists.forEach((artist) => {
+  results.data.allArtistsJson.edges.forEach((edge) => {
+    const artist = edge.node;
     createPage({
-      path: `/artists/${artist.key}`,
+      path: `/artists/${artist.key}/`,
       component: require.resolve('./src/templates/artist.js'),
-      context: { artist },
+      context: { key: artist.key },
     });
   });
+
+  // artists.forEach((artist) => {
+  //   createPage({
+  //     path: `/artists/${artist.key}`,
+  //     component: require.resolve('./src/templates/artist.js'),
+  //     context: { artist },
+  //   });
+  // });
 
   releases.forEach((release) => {
     createPage({

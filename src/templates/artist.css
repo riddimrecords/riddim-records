@@ -5,10 +5,7 @@
 .artistImg {
   margin-top: 30px;
   grid-area: artistImg;
-}
-
-.artistImg > img {
-  max-width: 90%;
+  width: 100%;
 }
 
 .artistInfo {
