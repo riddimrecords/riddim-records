@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
@@ -20,7 +21,7 @@ const ArtistPage = ({ data }) => {
           <Img className="artistImgFluid" fluid={artist.pic.childImageSharp.fluid} alt={artist.name} />
         </div>
         <div className="artistInfo">
-          {artist.info.map(paragraph => <p>{paragraph}</p>)}
+          {artist.info.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
         </div>
         <ArtistSocial artist={artist} />
       </div>
@@ -29,8 +30,8 @@ const ArtistPage = ({ data }) => {
 };
 
 ArtistPage.propTypes = {
-  pageContext: PropTypes.shape({
-    artist: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    artistsJson: PropTypes.object.isRequired,
   }).isRequired,
 };
 

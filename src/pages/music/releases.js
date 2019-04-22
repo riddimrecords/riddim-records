@@ -1,11 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../../components/shared/Layout';
 import Release from '../../components/music/release';
 import './releases.css';
-
-// const { releases } = require('../../data/releases');
 
 const Releases = ({ data }) => {
   const releases = data.allReleasesJson.edges;
@@ -16,11 +15,17 @@ const Releases = ({ data }) => {
       </Helmet>
       <div className="releasePage">
         {releases.map(release => (
-          <Release img={release.node.pic} name={release.node.name} link={release.node.key} />
+          // eslint-disable-next-line max-len
+          <Release key={release.node.key} img={release.node.pic} name={release.node.name} link={release.node.key} />
         ))}
       </div>
     </Layout>
   );
+};
+
+Releases.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.object.isRequired,
 };
 
 export default Releases;

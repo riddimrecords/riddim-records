@@ -18,7 +18,8 @@ const Release = (props) => {
 };
 
 Release.propTypes = {
-  img: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  img: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
 };

@@ -23,7 +23,7 @@ Section.propTypes = {
   brand: PropTypes.shape({
     name: PropTypes.string.isRequired,
     info: PropTypes.object.isRequired,
-    logo: PropTypes.string.isRequired,
+    logo: PropTypes.object.isRequired,
   }).isRequired,
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import artistProps from './artistProps';
 import './ArtistContainer.css';
 
 const ArtistContainer = (props) => {
@@ -18,6 +18,9 @@ const ArtistContainer = (props) => {
   );
 };
 
-ArtistContainer.propTypes = artistProps;
+ArtistContainer.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  artist: PropTypes.object.isRequired,
+};
 
 export default ArtistContainer;

@@ -51,10 +51,9 @@ const Navbar = () => {
             </button>
             <ul className="dropdown-content">
               <li key="upcoming" className="dropdown-item">
-                <Link onClick={handleEventClick}>
+                <Link to={`/events/${pastEvents[0].name}`} onClick={handleEventClick}>
                   Upcoming
                 </Link>
-                {/* <Link to={`/events/${upcomingEvents[0].name}`}>Upcoming</Link> */}
               </li>
               <li key="past" className="dropdown-item">
                 <Link to={`/events/${pastEvents[0].name}`}>Past</Link>

@@ -33,7 +33,8 @@ const LookbookPage = ({ data }) => {
       </Helmet>
       <LookbookGrid>
         {lookbookImages.map((image, index) => (
-          <div key={image} className="lookbookImg">
+          // eslint-disable-next-line react/no-array-index-key
+          <div key={index} className="lookbookImg">
             <Img fluid={image.childImageSharp.fluid} alt={`Lookbook ${index + 1} image`} />
           </div>
         ))}

@@ -61,7 +61,7 @@ const MobileNav = () => {
           </Link>
         </li>
         <li key="upcoming">
-          <Link to="/events/riddim11" onClick={handleNavLinkClick}>
+          <Link to="/events/riddim12" onClick={handleNavLinkClick}>
             Upcoming Events
           </Link>
         </li>

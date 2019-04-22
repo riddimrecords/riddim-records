@@ -21,10 +21,8 @@ const EventPoster = (props) => {
   const { event } = props;
   return (
     <EventImg fluid={event.poster.childImageSharp.fluid}>
-      <Img className="eventImg" fluid={event.poster.childImageSharp.fluid} />
+      <Img className="eventImg" fluid={event.poster.childImageSharp.fluid} alt={`${event.name} Poster`} />
     </EventImg>
-    // <EventImg fluid={event.poster.childImageSharp.fluid} alt="Riddim Poster" />
-    // <EventImg src={require(`../../images/events/${event.poster}`)} alt="Riddim Poster" />
   );
 };
 

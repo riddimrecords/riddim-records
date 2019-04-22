@@ -11,6 +11,6 @@ export default {
       aor: PropTypes.string,
     }),
     info: PropTypes.arrayOf(PropTypes.string).isRequired,
-    pic: PropTypes.string.isRequired,
+    pic: PropTypes.object.isRequired,
   }),
 };

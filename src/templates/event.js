@@ -35,9 +35,10 @@ const EventPage = ({ data, pageContext }) => {
 };
 
 EventPage.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.object.isRequired,
   pageContext: PropTypes.shape({
-    event: PropTypes.object.isRequired,
-    events: PropTypes.arrayOf(PropTypes.object).isRequired,
+    type: PropTypes.string.isRequired,
   }).isRequired,
 };
 

@@ -44,8 +44,8 @@ const ReleasePage = ({ data }) => {
 };
 
 ReleasePage.propTypes = {
-  pageContext: PropTypes.shape({
-    release: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    releasesJson: PropTypes.object.isRequired,
   }).isRequired,
 };
 
