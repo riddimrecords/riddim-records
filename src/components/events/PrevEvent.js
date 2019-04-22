@@ -8,7 +8,7 @@ const PrevEvent = (props) => {
   const { event, events } = props;
   return (
     <div>
-      <Link to={`/events/riddim${event.key === events[0].key ? events[events.length - 1].key : event.key - 1}`}>
+      <Link to={`/events/riddim${event.key === events[0].node.key ? events[events.length - 1].node.key : event.key - 1}`}>
         <FontAwesomeIcon icon={faArrowLeft} style={{ fontSize: '30px', color: 'white' }} />
       </Link>
     </div>

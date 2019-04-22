@@ -28,7 +28,6 @@ const EventsBanner = (props) => {
         <Link key={`${e.node.key}`} to={`/events/${e.node.name}`}>
           <div className="eventBannerImg">
             <Img fluid={e.node.poster.childImageSharp.fluid} alt={`${e.node.name} link`} />
-            {/* <img src={require(`../../images/events/${e.poster}`)} alt={`${e.name} link`} style={{ maxWidth: '100%' }} /> */}
           </div>
         </Link>
       ))}

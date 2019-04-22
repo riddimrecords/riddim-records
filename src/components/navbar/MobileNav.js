@@ -91,7 +91,7 @@ const MobileNav = () => {
           </Link>
         </li>
         <li key="hr">
-          <hr style={{ marginTop: '20px', color: 'grey' }} />
+          <hr style={{ marginTop: '20px', color: 'grey', width: '50vw' }} />
         </li>
       </ul>
     </div>

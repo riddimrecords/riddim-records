@@ -5,7 +5,7 @@
 .artistImg {
   margin-top: 30px;
   grid-area: artistImg;
-  width: 100%;
+  width: 50%;
 }
 
 .artistInfo {
@@ -20,22 +20,20 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  line-height: 1.5;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-column-gap: 60px;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "artistTitle artistTitle"
-    "artistImg artistInfo"
-    "artistSocial artistSocial";
+    "artistTitle"
+    "artistImg"
+    "artistInfo"
+    "artistSocial";
 }
 
-@media screen and (max-width: 992px) {
-  .artistGrid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "artistTitle"
-      "artistImg"
-      "artistInfo"
-      "artistSocial";
+@media screen and (max-width: 768px) {
+  .artistImg {
+    width: 100%;
   }
 }

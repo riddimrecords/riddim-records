@@ -57,9 +57,16 @@ nav li a {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1200px) {
+  .navbar {
+    width: 90vw;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .navbar {
     display: none;
+    width: 80vw;
   }
   .mobileNavbar {
     display: block;

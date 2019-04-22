@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Release = (props) => {
   const { img, name, link } = props;
   return (
     <Link to={`/music/releases/${link}`}>
       <div className="release">
-        <img src={require(`../../images/releases/${img}`)} alt={name} className="releasePic" />
+        <Img fluid={img.childImageSharp.fluid} alt={name} className="releasePic" />
         <div className="releaseMiddle">
           <div className="releaseText">{name}</div>
         </div>

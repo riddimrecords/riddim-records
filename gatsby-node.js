@@ -1,5 +1,4 @@
-// const { artists } = require('./src/data/artists');
-const { releases } = require('./src/data/releases');
+// const { releases } = require('./src/data/releases');
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const results = await graphql(`
@@ -25,11 +24,18 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           }
         }
       }
+      allReleasesJson {
+        edges {
+          node {
+            key
+          }
+        }
+      }
     }
   `);
 
   if (results.error) {
-    console.error('Something went wrong');
+    // console.error('Something went wrong');
     return;
   }
 
@@ -60,19 +66,20 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     });
   });
 
-  // artists.forEach((artist) => {
-  //   createPage({
-  //     path: `/artists/${artist.key}`,
-  //     component: require.resolve('./src/templates/artist.js'),
-  //     context: { artist },
-  //   });
-  // });
-
-  releases.forEach((release) => {
+  results.data.allReleasesJson.edges.forEach((edge) => {
+    const release = edge.node;
     createPage({
       path: `/music/releases/${release.key}`,
       component: require.resolve('./src/templates/release.js'),
-      context: { release },
+      context: { key: release.key },
     });
   });
+
+  // releases.forEach((release) => {
+  //   createPage({
+  //     path: `/music/releases/${release.key}`,
+  //     component: require.resolve('./src/templates/release.js'),
+  //     context: { release },
+  //   });
+  // });
 };

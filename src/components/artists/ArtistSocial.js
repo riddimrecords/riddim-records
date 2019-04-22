@@ -7,6 +7,7 @@ import aor from '../../images/shared/aor.png';
 
 const ArtistSocial = (props) => {
   const { artist } = props;
+  Object.keys(artist.social).forEach(key => (artist.social[key] == null) && delete artist.social[key]);
   const artistSocialCols = `repeat(${Object.keys(artist.social).length}, 1fr)`;
   return (
     <div
