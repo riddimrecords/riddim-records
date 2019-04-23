@@ -1,5 +1,5 @@
-const pastEvents = require('./pastevents.json');
-const upcomingEvents = require('./upcomingevents.json');
+// const pastEvents = require('./pastevents.json');
+// const upcomingEvents = require('./upcomingevents.json');
 
 // const date = new Date();
 // const day = date.getDate();
@@ -20,4 +20,4 @@ const upcomingEvents = require('./upcomingevents.json');
 //   }
 // }
 
-module.exports = { pastEvents, upcomingEvents };
+// module.exports = { pastEvents, upcomingEvents };

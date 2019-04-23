@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -32,6 +33,10 @@ const Artists = ({ data }) => {
       </ArtistsDiv>
     </Layout>
   );
+};
+
+Artists.propTypes = {
+  data: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export default Artists;

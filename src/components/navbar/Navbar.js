@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint no-alert: 0 */
 import React from 'react';
-import { Link, navigate } from 'gatsby';
+import {
+  Link, navigate, graphql, useStaticQuery,
+} from 'gatsby';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -9,13 +11,34 @@ import '@fortawesome/fontawesome-svg-core/styles.css'; // ensure icon loaded bef
 import MobileNav from './MobileNav';
 import './Navbar.css';
 import riddimLogo from '../../images/shared/riddimLogo.png';
-import { pastEvents, upcomingEvents } from '../../data/events';
 
 const Icon = styled(FontAwesomeIcon)`
   font-size: 16px;
 `;
 
 const Navbar = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allPasteventsJson {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+      allUpcomingeventsJson {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  const pastEvents = data.allPasteventsJson.edges;
+  const upcomingEvents = data.allUpcomingeventsJson.edges;
+
   const handleShopClick = (e) => {
     e.preventDefault();
     alert(
@@ -26,7 +49,7 @@ const Navbar = () => {
     e.preventDefault();
     return upcomingEvents.length === 0
       ? alert('There are currently no upcoming events, but please check back again soon!')
-      : navigate(`events/${upcomingEvents[0].name}`);
+      : navigate(`/events/${upcomingEvents[0].node.name}`);
   };
 
   return (
@@ -51,12 +74,12 @@ const Navbar = () => {
             </button>
             <ul className="dropdown-content">
               <li key="upcoming" className="dropdown-item">
-                <Link to={`/events/${pastEvents[0].name}`} onClick={handleEventClick}>
+                <Link to={`/events/${pastEvents[0].node.name}`} onClick={handleEventClick}>
                   Upcoming
                 </Link>
               </li>
               <li key="past" className="dropdown-item">
-                <Link to={`/events/${pastEvents[0].name}`}>Past</Link>
+                <Link to={`/events/${pastEvents[0].node.name}`}>Past</Link>
               </li>
             </ul>
           </div>
@@ -87,17 +110,17 @@ const Navbar = () => {
           <Link to="/lookbook">Lookbook</Link>
         </li>
         <li key="shop">
-          <Link to="/shop" onClick={handleShopClick}>
+          <Link to="/" onClick={handleShopClick}>
             Shop
           </Link>
         </li>
         <li key="cart">
-          <Link to="/cart" onClick={handleShopClick}>
+          <Link to="/" onClick={handleShopClick}>
             <Icon icon={faShoppingCart} />
           </Link>
         </li>
       </ul>
-      <MobileNav />
+      <MobileNav handleEventClick={handleEventClick} />
     </nav>
   );
 };

@@ -1,10 +1,27 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import riddimLogo from '../../images/shared/riddimLogo.png';
 
-const MobileNav = () => {
+const MobileNav = (props) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allPasteventsJson {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  const pastEvents = data.allPasteventsJson.edges;
+
+  const { handleEventClick } = props;
+
   const handleNavButtonClick = () => {
     const nav = document.querySelector('.mobileNavLinks');
     nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
@@ -61,12 +78,12 @@ const MobileNav = () => {
           </Link>
         </li>
         <li key="upcoming">
-          <Link to="/events/riddim12" onClick={handleNavLinkClick}>
+          <Link to={`/events/${pastEvents[0].node.name}`} onClick={handleEventClick}>
             Upcoming Events
           </Link>
         </li>
         <li key="past">
-          <Link to="/events/riddim1" onClick={handleNavLinkClick}>
+          <Link to={`/events/${pastEvents[0].node.name}`} onClick={handleNavLinkClick}>
             Past Events
           </Link>
         </li>
@@ -96,6 +113,10 @@ const MobileNav = () => {
       </ul>
     </div>
   );
+};
+
+MobileNav.propTypes = {
+  handleEventClick: PropTypes.func.isRequired,
 };
 
 export default MobileNav;

@@ -4,10 +4,10 @@
     "cat": "RR004",
     "name": "Senso Pt. 1",
     "releaseDate": "05.04.19",
-    "released": false,
-    "info": [""],
-    "pic": "../../images/releases/rr004Cover.jpg",
-    "preorder": "https://www.junodownload.com/products/atyk-senso-part-i/4088882-02/?fbclid=IwAR0RKWrcrFhzyC1Of4qDLO06CNwkOqhXRI1B7KO3KJgVKoWJ8Mg30n5rbn4"
+    "released": true,
+    "info": ["Heavy hitting duo ATYK make their Riddim Records debut with the first of a two part EP, 'Sensō'.", "The energetic sounds of 'Triple Homicide' and 'Nerve Damage' provide the perfect combination of driving basslines with tireless drums leaving you thirsty for more."],
+    "pic": "../images/releases/rr004Cover.jpg",
+    "fanlink": "https://fanlink.to/RR004"
   },
   {
     "key": "rr003",
@@ -16,7 +16,7 @@
     "releaseDate": "01.03.19",
     "released": true,
     "info": ["Bringing yet even more soulful goodness to Riddim Records, Dbrief delivers his debut EP 'Soul Brothers' containing 4 refreshing liquid flavours.", "Featuring the sounds of Riddim Records newcomer Kawa No Kami, and a creative track rework of Else Skogan's 'High Expectations', Dbrief is on top form once again."],
-    "pic": "../../images/releases/rr003Cover.jpg",
+    "pic": "../images/releases/rr003Cover.jpg",
     "soundcloud": "<iframe title='RR003' width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/719984991&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>",
     "fanlink": "fanlink.to/SoulBrothers"
   },
@@ -27,7 +27,7 @@
     "releaseDate": "18.01.19",
     "released": true,
     "info": ["K2T and Option make their Riddim Records debut with their slick new track 'Restrained Light'. The track instantly grasps the listener's attention with its thought-provoking melodies and deep bassline, embracing you in a warmth of sound.", "Adding a darker spin to Restrained Light, artist Narrate breathes new life into thetrack with his signature blend of deep n' dark drum and bass."],
-    "pic": "../../images/releases/rr002Cover.jpg",
+    "pic": "../images/releases/rr002Cover.jpg",
     "soundcloud": "<iframe title='RR02' width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/645856632&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>",
     "fanlink": "https://fanlink.to/RR002"
   },
@@ -38,7 +38,7 @@
     "releaseDate": "08.06.18",
     "released": true,
     "info": ["The team from Riddim Records have been working tirelessly behind the scenes on their first ever release, and it's a big one. Collating the sounds of three of the most promising up-and-comers the drum and bass scene has right now in an action-packed, 3-track E.P under the title Episode 1 ('Ep. 1'). RR's first release hopes to show the diversity that Riddim Records strives to push forward through working with tracks from across the drum and bass spectrum.", "The E.P. begins with the sounds of Leeds-based artist Dbrief, who sets us up with his track \"All The 9's\". The track infuses a clear Jungle influence, coupled with a classic Hip-Hop groove. A fresh and recognizable track from the liquid specialist himself.", "The second track, created by artist Thread, reflects his unique and forward-thinking approach to drum and bass. 'Mindless' offers its listeners a dark and experimental journey that so perfectly describes its creators taste in the fast-paced genre.", "Ep. 1's final track comes from Norwegian artist Yassily. Inherently a techno artist, Yassily's creation 'Expression' provides something a little bit different to the E.P with his hard-hitting sound ending the E.P. with something to get your feet moving."],
-    "pic": "../../images/releases/rr001Cover.jpg",
+    "pic": "../images/releases/rr001Cover.jpg",
     "soundcloud": "<iframe title='RR01' width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/500034594&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>",
     "fanlink": "https://fanlink.to/RR001"
   }

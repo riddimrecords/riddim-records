@@ -24,8 +24,7 @@ const Releases = ({ data }) => {
 };
 
 Releases.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export default Releases;

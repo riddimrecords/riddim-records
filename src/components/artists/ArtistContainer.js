@@ -19,8 +19,7 @@ const ArtistContainer = (props) => {
 };
 
 ArtistContainer.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  artist: PropTypes.object.isRequired,
+  artist: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export default ArtistContainer;
