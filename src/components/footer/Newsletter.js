@@ -36,7 +36,7 @@ const Newsletter = () => {
                   placeholder="First Name"
                   aria-label="First Name"
                   style={{
-                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px',
+                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px', color: 'white',
                   }}
                 />
               </label>
@@ -49,7 +49,7 @@ const Newsletter = () => {
                   placeholder="Last Name"
                   aria-label="Last Name"
                   style={{
-                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px',
+                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px', color: 'white',
                   }}
                 />
               </label>
@@ -62,7 +62,7 @@ const Newsletter = () => {
                   placeholder="Email Address"
                   aria-label="Email"
                   style={{
-                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px',
+                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px', color: 'white',
                   }}
                 />
               </label>
