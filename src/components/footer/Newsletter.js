@@ -11,9 +11,9 @@ const Newsletter = () => {
 
   return (
     <div className="newsletter">
-      <div id="mc_embed_signup" style={{ fontSize: '10px' }}>
+      <div id="mc_embed_signup">
         <form action="https://riddimrecords.us17.list-manage.com/subscribe/post?u=8706a828f346929e41c0279cd&amp;id=ed87a77b86" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-          <h2 style={{ display: 'inline' }}>Subscribe to our mailing list </h2>
+          <h2 style={{ display: 'inline', fontSize: '15px' }}>Subscribe to our mailing list </h2>
           <div style={{ position: 'relative' }}>
             <FontAwesomeIcon icon={faInfoCircle} onClick={handleInfoClick} />
             <p className="mailChimpInfo">
@@ -27,20 +27,53 @@ const Newsletter = () => {
           </div>
           <div id="mc_embed_signup_scroll">
             <div className="inputContainer">
-              <label htmlFor="mce-FNAME" style={{ display: 'none' }}>First Name </label>
-              <input className="inputName" type="text" name="FNAME" id="mce-FNAME" placeholder="First Name" />
-              <label htmlFor="mce-LNAME" style={{ display: 'none' }}>Last Name </label>
-              <input className="inputName" type="text" name="LNAME" id="mce-LNAME" placeholder="Last Name" />
-              <label htmlFor="mce-EMAIL" style={{ display: 'none' }}>Email</label>
-              <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" placeholder="Email Address" />
+              <label htmlFor="mce-FNAME">
+                <input
+                  className="inputName"
+                  type="text"
+                  name="FNAME"
+                  id="mce-FNAME"
+                  placeholder="First Name"
+                  aria-label="First Name"
+                  style={{
+                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px',
+                  }}
+                />
+              </label>
+              <label htmlFor="mce-LNAME">
+                <input
+                  className="inputName"
+                  type="text"
+                  name="LNAME"
+                  id="mce-LNAME"
+                  placeholder="Last Name"
+                  aria-label="Last Name"
+                  style={{
+                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px',
+                  }}
+                />
+              </label>
+              <label htmlFor="mce-EMAIL">
+                <input
+                  type="email"
+                  name="EMAIL"
+                  className="required email"
+                  id="mce-EMAIL"
+                  placeholder="Email Address"
+                  aria-label="Email"
+                  style={{
+                    background: '#111111', margin: '5px', padding: '5px', fontWeight: 'bold', fontSize: '12px',
+                  }}
+                />
+              </label>
             </div>
             <div id="mergeRow-gdpr" className="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
               <div className="content__gdpr">
-                <p>Select the ways you would like to hear from Riddim Records:</p>
+                <p style={{ fontSize: '12px' }}>Select the ways you would like to hear from Riddim Records:</p>
                 <fieldset style={{ border: 'none' }} className="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
                   <label className="checkbox subfield" htmlFor="gdpr_26475">
                     <input type="checkbox" id="gdpr_26475" name="gdpr[26475]" value="Y" className="av-checkbox" />
-                    <span>Email</span>
+                    <span style={{ fontSize: '12px' }}>Email</span>
                     {' '}
                   </label>
                 </fieldset>

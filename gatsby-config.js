@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Riddim Records',
-    description: 'Riddim Records - A UK-based record label founded on all things drum and bass.',
+    description: 'A UK-based record label founded on all things drum and bass.',
     author: '@mm13ah',
+    url: 'https://riddimrecords.co.uk',
+    lang: 'en-GB',
+    keywords: ['Riddim Records', 'Drum and Bass', 'UK Label'],
   },
   plugins: [
     'gatsby-plugin-react-helmet',

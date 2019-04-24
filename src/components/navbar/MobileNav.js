@@ -51,6 +51,7 @@ const MobileNav = (props) => {
           onClick={handleNavButtonClick}
           style={{ color: 'white', background: 'inherit', border: 'none' }}
           type="button"
+          aria-label="Toggle Navbar"
         >
           <FontAwesomeIcon
             icon={faBars}

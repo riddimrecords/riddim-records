@@ -115,7 +115,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li key="cart">
-          <Link to="/" onClick={handleShopClick}>
+          <Link to="/" onClick={handleShopClick} aria-label="Cart">
             <Icon icon={faShoppingCart} />
           </Link>
         </li>

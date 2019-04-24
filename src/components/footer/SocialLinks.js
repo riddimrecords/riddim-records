@@ -7,21 +7,25 @@ import {
 
 const socialLinks = [
   {
+    name: 'Soundcloud',
     href: 'https://soundcloud.com/riddimrecordsuk',
     icon: faSoundcloud,
     key: 'soundcloud',
   },
   {
+    name: 'Facebook',
     href: 'https://www.facebook.com/RiddimRecordsUK/',
     icon: faFacebook,
     key: 'facebook',
   },
   {
+    name: 'Instagram',
     href: 'https://www.instagram.com/riddimrecords/',
     icon: faInstagram,
     key: 'instagram',
   },
   {
+    name: 'Twitter',
     href: 'https://twitter.com/riddimcardiff',
     icon: faTwitter,
     key: 'twitter',
@@ -39,6 +43,7 @@ const SocialLinks = () => (
             target="_blank"
             rel="noopener noreferrer"
             className="socialLink"
+            aria-label={link.name}
           >
             <FontAwesomeIcon className="socialIcon" icon={link.icon} />
           </a>
