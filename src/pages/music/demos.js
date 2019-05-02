@@ -1,17 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../../components/shared/Layout';
-import riddimRecordsImg from '../../images/shared/riddimRecords.png';
 import './demos.css';
 
-const Demos = () => (
+const DemosPage = ({ data }) => (
   <Layout>
     <Helmet>
       <title>Riddim Records | Demos</title>
     </Helmet>
     <div className="demos" style={{ marginTop: '50px' }}>
       <h1>Submit your demos below!</h1>
-      <img src={riddimRecordsImg} alt="Riddim Records Logo" style={{ width: '100px' }} />
+      <Img fluid={data.riddimRecordsImg.childImageSharp.fluid} alt="Riddim Records Logo" style={{ width: '100px' }} />
+      {/* <img src={riddimRecordsImg} alt="Riddim Records Logo" style={{ width: '100px' }} /> */}
       <h2>Rules</h2>
       <ul style={{ listStyleType: 'none', padding: '0', marginTop: '0' }}>
         <li>No bootlegs or unofficial remixes.</li>
@@ -45,4 +48,20 @@ const Demos = () => (
   </Layout>
 );
 
-export default Demos;
+export const pageQuery = graphql`
+  query {
+    riddimRecordsImg: file(relativePath: {eq: "shared/riddimRecords.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
+
+export default DemosPage;
+
+DemosPage.propTypes = {
+  data: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+};
