@@ -1,31 +1,27 @@
 .eventDesc {
   grid-area: eventDesc;
   font-size: 23px;
+  margin-bottom: 0;
 }
-
-/* .eventInfoGrid {
-  grid-area: eventInfoGrid;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
-} */
 
 .eventArtists {
   list-style-type: none;
   text-align: center;
   padding: 0;
   margin-top: 0;
+  grid-column: 1 / 3;
 }
 
 .eventInfo {
   margin: 0;
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
     "eventPoster eventDate"
     "eventPoster eventDesc"
-    "eventPoster eventArtists"
+    "eventArtists eventArtists"
     "eventLocation eventLocation";
 }
 
@@ -42,6 +38,12 @@
   display: none;
   font-size: 30px;
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .eventDesc {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 992px) {

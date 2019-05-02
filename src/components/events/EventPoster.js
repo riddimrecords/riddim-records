@@ -14,6 +14,7 @@ const EventImg = styled.div`
   }
   .eventImg { 
     width: 30vw;
+    height: auto;
   }
 `;
 

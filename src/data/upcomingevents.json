@@ -3,15 +3,24 @@
     "key": 12,
     "name": "riddim12",
     "poster": "../images/events/Riddim12.jpg",
+    "date": "31.05.19",
+    "info": "Jungle Jam is back and we're beyond excited to present our annual summer carnival with this massive line up! We're very excited to have our close friends Riddim Records taking over Room 2 of our upcoming Summer Carnival. Bringing their signature cross-genre sound, they'll be taking the event by storm!",
+    "artists": ["Calibre & DRS (90 Minute Set)", "Mungo's Hifi & Charlie P (2 Hour Courtyard Takeover)", "S.P.Y Dubplate Style Takeover", "Special Guest: Unglued", "Kenny Ken", "Deadline", "Luke EP", "D Low", "Double Gee", "+ more TBA"],
+    "location": "<iframe width='90%' height='90%' title='map' src='https://maps.google.com/maps?q=mint%20ware%20house&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'/>"
+  },
+  {
+    "key": 13,
+    "name": "riddim13",
+    "poster": "../images/events/Riddim13.jpg",
     "date": "15.06.19",
     "info": "Jungle Jam makes its way down to Cardiff for one of its biggest events of the year! Bringing their Jungle flavors with an immersive day party at one of Cardiff's most beloved venues - Tramshed. With a huge line up, music across 2 rooms, and food served throughout the day, we can't wait for this one!",
     "artists": ["Ray Keith B2B Bladerunner ft Navigator MC", "Serum & Inja", "Randall ft. MC Fearless", "Unglued (Jungle set)", "Kenny Ken & Ragga Twins", "Hybrid B2B Lavery ", "Deadline (Jungle Set)", "Kumarachi", "Mascot b2b Benji (Riddim Records)", "Hosted by Navigator, Fearless, Inja, XL + Ragga Twins"],
     "location": "<iframe height='90%' width='90%' title='map' src='https://maps.google.com/maps?q=Tramshed%20Cardiff&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed'/>"
   },
   {
-    "key": 13,
-    "name": "riddim13",
-    "poster": "../images/events/Riddim13b.jpeg",
+    "key": 14,
+    "name": "riddim14",
+    "poster": "../images/events/Riddim14b.jpeg",
     "date": "05.07.19",
     "info": "Riddim Records is one of the UK's fastest growing independent drum and bass brands bringing their signature, cross-spectrum sound. Expanding out of Cardiff, Riddim Records are venturing to cities across the UK with their unique style and energy.",
     "artists": [],

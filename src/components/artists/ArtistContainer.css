@@ -1,9 +1,11 @@
+/* On mobile/tablet, artist names are always visible */
 .artist {
   position: relative;
+  opacity: 1;
 }
 
 .artistPic {
-  opacity: 1;
+  opacity: 0.5;
   display: block;
   max-width: 100%;
   height: auto;
@@ -12,25 +14,61 @@
 }
 
 .artistMiddle {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .artist:hover .artistPic {
   opacity: 0.3;
 }
 
-.artist:hover .artistMiddle {
-  opacity: 1;
-}
-
 .artistText {
   color: white;
   font-size: 30px;
+}
+
+/* On desktop - artist names are invisible until hover */
+@media screen and (min-width: 992px) {
+  .artist {
+    position: relative;
+  }
+  
+  .artistPic {
+    opacity: 1;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .artistMiddle {
+      transition: 0.5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+  }
+  
+  .artist:hover .artistPic {
+    opacity: 0.3;
+  }
+  
+  .artist:hover .artistMiddle {
+    opacity: 1;
+  }
+  
+  .artistText {
+    color: white;
+    font-size: 30px;
+  }
 }

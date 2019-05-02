@@ -10,7 +10,7 @@ import EventInfo from '../components/events/EventInfo';
 const EventsMain = styled.div`
   font-size: 20px;
   margin-top: 50px;
-  width: 75vw;
+  width: 80vw;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6em;
