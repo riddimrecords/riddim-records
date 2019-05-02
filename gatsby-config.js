@@ -29,15 +29,16 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Riddim Records',
+        short_name: 'riddim',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
+        background_color: '#111111',
+        theme_color: '#111111',
+        display: 'browser',
         icon: 'src/images/shared/icon.ico', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-offline',
   ],
 };
