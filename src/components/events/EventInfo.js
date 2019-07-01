@@ -13,7 +13,7 @@ const EventInfo = (props) => {
       <EventDate event={event} events={events} />
       <p className="eventDesc">{event.info}</p>
       <div className="eventArtists">
-        {event.artists.length > 0 && <h4 style={{ marginBottom: '0' }}>Featuring:</h4>}
+        {event.artists[0] !== '' && <h4 style={{ marginBottom: '0' }}>Featuring:</h4>}
         <ul style={{ listStyleType: 'none', padding: '0' }}>
           {event.artists.map(artist => <li key={artist}>{artist}</li>)}
         </ul>

@@ -98,5 +98,23 @@
     "info": "After an already energetic year, Riddim launches its first solo event of 2019 in the wonderful Clwb Ifor Bach. Bringing you the sounds of the incredible... Technimatic! Hosted by MC Lowqui! We feel truly humbled to be asked to host the Cardiff-leg of Technimatic's album launch tour, and this event is definitely going to be something special.",
     "artists": ["Technimatic ft. LowQui Mc", "Benji", "Wink", "Plethora", "Psybrations", "Hosted by MC XL + Lowqui"],
     "location": "<iframe height='90%' width='90%' title='map' src='https://maps.google.com/maps?q=Clwb%20ifor%20Bach&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed'/>"
+  },
+  {
+    "key": 12,
+    "name": "riddim12",
+    "poster": "../images/events/Riddim12.jpg",
+    "date": "31.05.19",
+    "info": "Jungle Jam is back and we're beyond excited to present our annual summer carnival with this massive line up! We're very excited to have our close friends Riddim Records taking over Room 2 of our upcoming Summer Carnival. Bringing their signature cross-genre sound, they'll be taking the event by storm!",
+    "artists": ["Calibre & DRS (90 Minute Set)", "Mungo's Hifi & Charlie P (2 Hour Courtyard Takeover)", "S.P.Y Dubplate Style Takeover", "Special Guest: Unglued", "Kenny Ken", "Deadline", "Luke EP", "D Low", "Double Gee", "+ more TBA"],
+    "location": "<iframe width='90%' height='90%' title='map' src='https://maps.google.com/maps?q=mint%20ware%20house&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'/>"
+  },
+  {
+    "key": 13,
+    "name": "riddim13",
+    "poster": "../images/events/Riddim13.jpg",
+    "date": "15.06.19",
+    "info": "Jungle Jam makes its way down to Cardiff for one of its biggest events of the year! Bringing their Jungle flavors with an immersive day party at one of Cardiff's most beloved venues - Tramshed. With a huge line up, music across 2 rooms, and food served throughout the day, we can't wait for this one!",
+    "artists": ["Ray Keith B2B Bladerunner ft Navigator MC", "Serum & Inja", "Randall ft. MC Fearless", "Unglued (Jungle set)", "Kenny Ken & Ragga Twins", "Hybrid B2B Lavery ", "Deadline (Jungle Set)", "Kumarachi", "Mascot b2b Benji (Riddim Records)", "Hosted by Navigator, Fearless, Inja, XL + Ragga Twins"],
+    "location": "<iframe height='90%' width='90%' title='map' src='https://maps.google.com/maps?q=Tramshed%20Cardiff&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed'/>"
   }
 ]

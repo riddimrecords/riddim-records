@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/shared/Layout';
 import EventsBanner from '../components/events/EventsBanner';
+// eslint-disable-next-line import/no-named-as-default
 import EventInfo from '../components/events/EventInfo';
 
 const EventsMain = styled.div`

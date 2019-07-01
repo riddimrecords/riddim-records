@@ -1,8 +1,30 @@
 [
   {
+    "key": "rr006",
+    "cat": "RR006",
+    "name": "Senso Pt. II",
+    "releaseDate": "29.06.19",
+    "released": true,
+    "info": ["ATYK are back with part 2 of their Sensō EP.", "Following the success of part 1, ATYK have returned with something even heavier. Featuring the vocals of Drum and Bass veteran Dread MC, and a Jungle-influenced remix from one of the UK's fastest rising stars, Kumarachi."],
+    "pic": "../images/releases/rr006Cover.jpg",
+    "soundcloud": "<iframe title='RR006' width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/814352259&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>",
+    "fanlink": "https://fanlink.to/RR006"
+  },
+  {
+    "key": "rr005",
+    "cat": "RR005",
+    "name": "Tweakz - Tell Me Why / Dewy Eyed",
+    "releaseDate": "17.05.19",
+    "released": true,
+    "info": ["Riddim's fifth release is a stunning 2-track EP from the unique and talented, Tweakz.", "'Tell Me Why' and 'Dewy Eyed' bring euphoric jazz-infused flavours that will be sure to light up the dance floor. The EP's thought-provoking nature lends itself to Tweakz's signature sound."],
+    "pic": "../images/releases/rr005Cover.jpg",
+    "soundcloud": "<iframe title='RR005' width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/781061385&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>",
+    "fanlink": "https://fanlink.to/RR005"
+  },
+  {
     "key": "rr004",
     "cat": "RR004",
-    "name": "Senso Pt. 1",
+    "name": "Senso Pt. I",
     "releaseDate": "05.04.19",
     "released": true,
     "info": ["Heavy hitting duo ATYK make their Riddim Records debut with the first of a two part EP, 'Sensō'.", "The energetic sounds of 'Triple Homicide' and 'Nerve Damage' provide the perfect combination of driving basslines with tireless drums leaving you thirsty for more."],
@@ -43,5 +65,4 @@
     "soundcloud": "<iframe title='RR01' width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/500034594&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>",
     "fanlink": "https://fanlink.to/RR001"
   }
-  
 ]
