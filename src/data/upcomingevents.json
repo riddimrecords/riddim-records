@@ -1,11 +1,11 @@
 [
   {
-    "key": 14,
-    "name": "riddim14",
-    "poster": "../images/events/Riddim14b.jpeg",
-    "date": "05.07.19",
-    "info": "Riddim Records is one of the UK's fastest growing independent drum and bass brands bringing their signature, cross-spectrum sound. Expanding out of Cardiff, Riddim Records are venturing to cities across the UK with their unique style and energy.",
-    "artists": [""],
-    "location": "<iframe height='90%' width='90%' title='map' src='https://maps.google.com/maps?q=eastnor%20castle%20deer%20park&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed'/>"
-  }
+    "key": 15,
+    "name": "riddim15",
+    "poster": "../images/events/Riddim15.jpg",
+    "date": "16.11.19",
+    "info": "Riddim are back for another massive event and this time, we've teamed up with one of Swansea's most prestigious independent brands... Rise Swansea! We're bringing the HEAT to the Attic for an evening of only the best Drum & Bass.",
+    "artists": ["Voltage [Hospital Records]", "DJ Levela [Multi Function Music]", "Ebbens B2B Mowgli [Riddim Records]", "Helix Takeover [HELIX Records]", "Jammez [Dread Recordings]"],
+    "location": "<iframe width='90%' height='90%' title='map' src='https://maps.google.com/maps?q=the%20attic%20swansea&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed'/>"
+    }
 ]

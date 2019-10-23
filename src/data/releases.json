@@ -1,5 +1,27 @@
 [
   {
+    "key": "rr008",
+    "cat": "RR008",
+    "name": "Thread - Holding On / No Love",
+    "releaseDate": "28.09.19",
+    "released": true,
+    "info": ["Label-boss Thread makes his return to Riddim Records with a new 2-track EP: 'Holding On / No Love'.", "Holding On starts things off with its deep liquid style, it's sound enticing the listener with its dreamy vocals and luscious piano chords.Thread takes you even deeper with the dark sound of No Love."],
+    "pic": "../images/releases/rr008Cover.jpg",
+    "soundcloud": "<iframe title='RR008' width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/877042237&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>",
+    "fanlink": "https://fanlink.to/RR008"
+  },
+  {
+    "key": "rr007",
+    "cat": "RR007",
+    "name": "Changer - Lola / Submerged",
+    "releaseDate": "09.08.19",
+    "released": true,
+    "info": ["Riddim Records welcomes Changer to the family with a stunning two track EP: Lola / Submerged.", "'Lola' sets things off with its gorgeous soundscape and distinct piano riff, offering its listener a tranquil, yet punchy liquid track.", "Following nicely comes 'Submerged', a deep and growling number to get any dance floor pumping."],
+    "pic": "../images/releases/rr007Cover.png",
+    "soundcloud": "<iframe title='RR007' width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/843308138&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>",
+    "fanlink": "https://fanlink.to/RR007"
+  },
+  {
     "key": "rr006",
     "cat": "RR006",
     "name": "Senso Pt. II",

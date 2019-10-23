@@ -11,6 +11,7 @@ const AboutDiv = styled.div`
   width: 50vw;
   font-size: 20px;
   margin: 80px auto 0px auto;
+  line-height: 1.7;
   @media screen and (max-width: 992px) {
     width: 80vw;
   }
